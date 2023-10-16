@@ -1,0 +1,46 @@
+% !TEX root = ../proposal.tex
+
+\section*{Background}
+
+As mentioned in the introduction, Poincaré's definition of the cohomology of a space $X$ relies on its cochains, denoted simply as $\cochains$, which arise from a cellular decomposition of $X$.
+This construction is local in nature, allowing for a piecewise analysis of $X$, and is thus well-suited for concrete computations.
+The computer algebra system (CAS) \texttt{SageMath}, among others, is a tool where this approach to cohomology is implemented.
+Unfortunately, cohomology—or equivalently, the quasi-isomorphism type of $\cochains$—omits crucial homotopical information.
+As an illustrative example, consider the spaces $\bC P^2$ and $S^2 \vee S^4$, the union of a 2- and a 4-sphere over a point.
+Despite their cohomology groups being isomorphic, these spaces are not homotopy equivalent.
+To distinguish them, one can employ the Alexander--Whitney product in $\cochains$ to reveal that their ring structures in cohomology are not isomorphic \cite{alexander1936ring, whitney1938products}.
+This product-enhanced version of $\cochains$ retains the original's computability and is also supported in \texttt{SageMath}.
+Considering the suspension of these spaces leads to two non-homotopic spaces $\Sigma(\mathbb{C} P^2)$ and $\Sigma(S^2 \vee S^4)$ whose cohomologies are isomorphic as graded rings.
+To distinguish them we can consider Steenrod squares on $\rH^\bullet$ which are effectively computable through the cup-$i$ products \cite{steenrod1947products}, a structure on $\cochains$ also implemented in \texttt{SageMath}, which generalizes the Alexander-Whitney structure.
+These enhancements on $\cochains$ would not suffice to distinguish a similar comparison involving a quaternionic projective space.
+In that case, we can use odd prime power operations, but these are not available on mainstream computer algebra systems yet.
+
+\smallskip
+A ground-breaking result in modern homotopy theory, due to Mandell \cite{mandell2006homotopy_type}, is that, under certain finiteness assumptions, all the homotopical information of $X$ is captured by an enhancement of the cup-$i$ product structure on $\cochains$.
+This complete algebro-homotopical invariant, known as an $E_\infty$-algebra, is the conceptual cornerstone of our program, since, after work by the author and others, it can be given a concrete local description (\cite{mcclure2003multivariable,berger2004combinatorial,medina2020prop1}).
+
+%%As mentioned in the introduction, Poincar\'e's definition of the cohomology of a space $X$ relies on the cochains $\cochains$ of a cellular decomposition of $X$.
+%%This construction is local and well-suited for concrete computations.
+%%Unfortunately, cohomology, or equivalently the quasi-isomorphism type of $\cochains$, forgets much homotopical information.
+%%For example, the cohomology groups of $\mathbb{C} P^2$ and $S^2 \vee S^4$, the union of a $2$- and a $4$-sphere over a point, are isomorphic despite these spaces not being homotopy equivalent.
+%%By choosing triangulations for these spaces, the Alexander--Whitney product can be used to show that the ring structure in cohomology distinguishes them.
+%%An algorithm for this computation is available for example on \texttt{SageMath}.
+%
+%
+%A fundamental step in the direction of our goal is the description of a ring structure on $\rH^\bullet$ using the Alexander--Whitney product on simplicial cochains $\cochains$ \cite{alexander1936ring, whitney1938products}.
+%Let us illustrate with an example the additional information captured by this ring structure.
+%The cohomology groups of $\mathbb{C} P^2$ and $S^2 \vee S^4$, the union of a $2$- and a $4$-sphere over a point, are isomorphic despite these spaces not being homotopy equivalent.
+%By choosing triangulations for these spaces, the Alexander--Whitney product can be used to show that the ring structure in cohomology distinguishes them.
+%An algorithm for this type of computation is available for example on \texttt{SAGE}.
+%Considering the suspension of these spaces leads to two non-homotopic spaces $\Sigma(\mathbb{C} P^2)$ and $\Sigma(S^2 \vee S^4)$ whose cohomologies are isomorphic as graded rings.
+%Distinguishing these effectively lead us to a novel step in the direction of our goal.
+%Let us consider a prime $p$.
+%Steenrod made $\rH^\bullet$ it into a module over his algebra $\cA_p$ \cite{steenrod1962cohomology}.
+%This structure is explicitly induced from the $E_\infty$-algebra structure on simplicial cochains by means of the cup-$(p,i)$ products.
+%These generalize to odd primes the cup-$i$ products of Steenrod, and were introduced and implemented, using effective versions of May's operadic methods \cite{may1970general}, in \cite{medina2021may_st,medina2021comch}.
+%The action of $\cA_2$ suffices to distinguish $\Sigma(\mathbb{C} P^2)$ and $\Sigma(S^2 \vee S^4)$, but and odd prime will be needed for similar comparisons using the suspension of quaternionic projective spaces, for example.
+%
+%
+%A ground-breaking result in modern homotopy theory, due to Mandell \cite{mandell2006homotopy_type}, is that, under certain finiteness assumptions, all the homotopical information of $X$ is captured by a so-called $E_\infty$-algebra structure on $\cochains$.
+%This complete algebro-homotopical invariant is the conceptual cornerstone of our program, since, after work by the author and others, it can be given a concrete local description (\cite{mcclure2003multivariable,berger2004combinatorial,medina2020prop1}).
+%This allows for the effective description of progressively richer homotopical invariants that can be implemented into computer algebra systems (CAS) such as \texttt{ComCH}, \texttt{SageMath}, and \texttt{Maple}.

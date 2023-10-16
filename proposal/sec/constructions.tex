@@ -3,7 +3,6 @@
 \section*{(1) Effective Algebro-Homotopical Constructions and Their Implementations \\ (PhD1, MSc1, MSc2)}
 
 A foundational goal of the systematic study of topological spaces up homotopy equivalence is the development of algebraic invariants, such as cohomology.
-%Our program focuses on spaces that can be decomposed into cells.
 As mentioned in the introduction, Poincar\'e's definition of cohomology $\rH^\bullet$ relies on the cochains $\cochains$ of a cellular space.
 A ground-breaking result in modern homotopy theory, due to Mandell \cite{mandell2006homotopy_type}, is that, under certain finiteness assumptions, all the homotopical information of a cellular space is captured by a so-called $E_\infty$-algebra structure on $\cochains$.
 Aided by this language, the first goal of our program can be more precisely stated as follows:
@@ -25,7 +24,7 @@ Let us consider a prime $p$.
 Steenrod made $\rH^\bullet$ it into a module over his algebra $\cA_p$ \cite{steenrod1962cohomology}.
 This structure is explicitly induced from the $E_\infty$-algebra structure on simplicial cochains by means of the cup-$(p,i)$ products.
 These generalize to odd primes the cup-$i$ products of Steenrod, and were introduced and implemented, using effective versions of May's operadic methods \cite{may1970general}, in \cite{medina2021may_st,medina2021comch}.
-The action of $\cA_2$ suffices to distinguish $\Sigma(\mathbb{C} P^2)$ and $\Sigma(S^2 \vee S^4)$, but and odd prime will be needed for similar comparisons using the suspension of quaternionic projective spaces.
+The action of $\cA_2$ suffices to distinguish $\Sigma(\mathbb{C} P^2)$ and $\Sigma(S^2 \vee S^4)$, but and odd prime will be needed for similar comparisons using the suspension of quaternionic projective spaces, for example.
 
 %Steenrod operations in the mod $p$ cohomology of spaces, which together with the Bockstein homomorphism provide a complete account of the mod $p$ cohomology functor.
 
@@ -47,7 +46,16 @@ More specifically, we will complete the following tasks:
 Additionally, making them accessible through computer computations represents the initial stride toward integrating secondary operations into persistent cohomology, as discussed in Section 3.
 
 \smallskip\noindent\textbf{Methodology}.
-We have already established a strategic partnership with the Ontario Research Centre for Computer Algebra (ORCCA), and the software development aspects of this project will be executed in close collaboration with this institution.
+We have already established a strategic partnership with the Ontario Research Centre for Computer Algebra (ORCCA) and all students in the my program will actively participate in our weekly meetings.
+
+(MSc1) will review the existing implementation of the mod 2 Cartan and Adem coboundary constructor prototyped in \texttt{Python}.
+They will then develop a compatible framework for this routine to be compatible with the large scale project $\texttt{SAGE}$.
+
+(MSc2) will use this infrastructure to design and implement an odd prime Cartan coboundary constructor directly into \texttt{SAGE}.
+
+(PhD1) will use the new models of the $E_\infty$-operad \cite{medina2020prop1} to prove the odd Adem relation effectively.
+This will require a solid grasp of group homology, which will be provided in the form of course taught by the PI for the department at large.
+Following this significant achivement, (PhD1) will use the code base developed by (MSc1) and (MSc2) to design and implement into \texttt{SAGE} a constructor of odd prime Adem coboundaries.
 
 \medskip\noindent\textbf{{\sc Khovanov homology} (PhD2)}
 $\mathrm{KH_\bullet}$ is a powerful algebraic invariant of knots and links which refines the Jones polynomial \cite{khovanov2000khovanov}.
@@ -72,8 +80,12 @@ Designing and implementing algorithms for the computation of all Steenrod operat
 \smallskip\noindent(PhD2c)
 Computing these invariants for $p=3,5,7$ and knots with up to 14 crossing.
 
-\smallskip\noindent This software's primary impact will be in the field of low-dimensional topology, enabling a more precise exploration of intricate properties related to knots and links.
+%\smallskip\noindent This software's primary impact will be in the field of low-dimensional topology, enabling a more precise exploration of intricate properties related to knots and links.
 
 \smallskip\noindent\textbf{Methodology}.
-We have already agreed to collaborate with Cantero-Morán, who will serve as a secondary advisor.
-Furthermore, the support of ORCCA will ensure the quality of the resulting software.
+For this project, (PhD2) will work closely with both the PI and Cantero-Morán, who will serve as a secondary advisor.
+The first step of this project, to be accomplished as joint work by Cantero-Mor\'an, (PhD2), and the PI, will generalize the PI's cup-$i$ formulas \cite{medina2023oddcartan} to the odd prime case.
+Preliminary work as shown that this task is complex and interesting on its own right, being related to Tate cohomology of the symmetric groups.
+This preparatory step is needed since the existing cup-$(p,i)$ formulas, introduced by the PI in \cite{medina2021may_st}, are not adequate for the adaptation to the Burnside category done by Cantero-Mor\'an in the even prime case \cite{cantero-moran2020khovanov}.
+After this step is completed, (PhD2) will generalize said adaptation for odd primes and design an algorithm for the computation of these invariants.
+Finally, (PhD2) will develop, in consultation with other members of ORCCA, a high-performance tool for the computation of these invariants from diagram presentations, and produce a catalogue of Steenrod operations for all knots up to 14 crossings.
