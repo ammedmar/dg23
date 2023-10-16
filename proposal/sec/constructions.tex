@@ -1,0 +1,79 @@
+% !TEX root = ../proposal.tex
+
+\section*{(1) Effective Algebro-Homotopical Constructions and Their Implementations \\ (PhD1, MSc1, MSc2)}
+
+A foundational goal of the systematic study of topological spaces up homotopy equivalence is the development of algebraic invariants, such as cohomology.
+%Our program focuses on spaces that can be decomposed into cells.
+As mentioned in the introduction, Poincar\'e's definition of cohomology $\rH^\bullet$ relies on the cochains $\cochains$ of a cellular space.
+A ground-breaking result in modern homotopy theory, due to Mandell \cite{mandell2006homotopy_type}, is that, under certain finiteness assumptions, all the homotopical information of a cellular space is captured by a so-called $E_\infty$-algebra structure on $\cochains$.
+Aided by this language, the first goal of our program can be more precisely stated as follows:
+
+\smallskip\noindent(1a) Effectively describing progressively richer layers of homotopical data using the $E_\infty$-algebra on $\cochains$.\par
+\noindent(1b) Implementing these constructions into computer algebra systems (CAS) such as \texttt{ComCH}, \texttt{SAGE}, and \texttt{Maple}.
+
+\smallskip\noindent These developments will render the invariants within these layers accessible through computer-based computations, which is indispensable for their use in data science (Section 3), and, additionally, they will play an essential role in providing local descriptions of topological action functionals on triangulated space-times (Section 4).
+
+\medskip\noindent\textbf{Earlier work}.
+A fundamental step in the direction of our goal is the description of a ring structure on $\rH^\bullet$ using the Alexander--Whitney product on simplicial cochains $\cochains$ \cite{alexander1936ring, whitney1938products}.
+Let us illustrate with an example the additional information captured by this ring structure.
+The cohomology groups of $\mathbb{C} P^2$ and $S^2 \vee S^4$, the union of a $2$- and a $4$-sphere over a point, are isomorphic despite these spaces not being homotopy equivalent.
+By choosing triangulations for these spaces, the Alexander--Whitney product can be used to show that the ring structure in cohomology distinguishes them.
+An algorithm for this type of computation is available for example on \texttt{SAGE}.
+Considering the suspension of these spaces leads to two non-homotopic spaces $\Sigma(\mathbb{C} P^2)$ and $\Sigma(S^2 \vee S^4)$ whose cohomologies are isomorphic as graded rings.
+Distinguishing these effectively lead us to a novel step in the direction of our goal.
+Let us consider a prime $p$.
+Steenrod made $\rH^\bullet$ it into a module over his algebra $\cA_p$ \cite{steenrod1962cohomology}.
+This structure is explicitly induced from the $E_\infty$-algebra structure on simplicial cochains by means of the cup-$(p,i)$ products.
+These generalize to odd primes the cup-$i$ products of Steenrod, and were introduced and implemented, using effective versions of May's operadic methods \cite{may1970general}, in \cite{medina2021may_st,medina2021comch}.
+The action of $\cA_2$ suffices to distinguish $\Sigma(\mathbb{C} P^2)$ and $\Sigma(S^2 \vee S^4)$, but and odd prime will be needed for similar comparisons using the suspension of quaternionic projective spaces.
+
+%Steenrod operations in the mod $p$ cohomology of spaces, which together with the Bockstein homomorphism provide a complete account of the mod $p$ cohomology functor.
+
+\medskip\noindent\textbf{{\sc Relations}}.
+The next layer of homotopical structure after Steenrod operations comes from the relations these operations satisfy.
+By group homology computations, or more abstractly Mandell's Theorem, we known that there must be some structure on the $E_\infty$-algebra on $\cochains$ inducing these so-called \textit{Cartan} and \textit{Adem relations}.
+%We referred to these as Cartan and Adem coboundaries.
+Recently, these structures have been effectively described over any prime for Cartan's, and over the even prime for Adem's \cite{medina2020cartan,medina2023oddcartan,medina2021adem}.
+
+\medskip\noindent\textbf{Goals}.
+My team will culminate this research direction and consolidate it into useful software.
+More specifically, we will complete the following tasks:
+
+\smallskip\noindent(MSc1) Implementing the existing Cartan and Adem structures over the even prime.\par
+\noindent(MSc2) Implementing the existing Cartan structure over odd primes.\par
+\noindent(PhD1) Discovering and implementing the Adem structure over odd primes.
+
+\smallskip\noindent As we will detail in Section 4, these structures have already proven important in the classification of topological phases of matter.
+Additionally, making them accessible through computer computations represents the initial stride toward integrating secondary operations into persistent cohomology, as discussed in Section 3.
+
+\smallskip\noindent\textbf{Methodology}.
+We have already established a strategic partnership with the Ontario Research Centre for Computer Algebra (ORCCA), and the software development aspects of this project will be executed in close collaboration with this institution.
+
+\medskip\noindent\textbf{{\sc Khovanov homology} (PhD2)}
+$\mathrm{KH_\bullet}$ is a powerful algebraic invariant of knots and links which refines the Jones polynomial \cite{khovanov2000khovanov}.
+It is effectively computable from a chain complex associated with a knot diagram, and several implementations of algorithms for this task exist.
+A ground-breaking result of two teams (\cite{lipshitz2014khovanov,kriz2016khovanov}) states that this invariant can be obtained from a cellular spectrum; which implies, indirectly, that $\mathrm{KH_\bullet}$ has an action of the Steenrod algebra $\cA_p$ for any prime $p$.
+My team will focus on the design and implementation of algorithms computing this finer invariant effectively.
+
+\medskip\noindent\textbf{Earlier work}.
+Adapting the formulas of \cite{medina2023fast_sq}, Cantero-Mor\'an constructed structure at the chain level inducing the action of $\cA_2$ on $\KH$ \cite{cantero-moran2020khovanov}.
+His effective methods recover those of Lipshitz and Sakar, which deal with the computation of $\Sq^1$ and $\Sq^2$ \cite{lipshitz2014steenrod}.
+These two operations were implemented by Seed \cite{seed2012khovanov} and, last year, all squares were implemented into \texttt{SAGE} by Milstein using Cantero-Morán's structure \cite{milstein2022khovanov}.
+Put together, these developments have effectively provided a complete treatment of all primary operations on $\KH$ at the even prime.
+
+\medskip\noindent\textbf{Goals}.
+Provide a complete treatment of primary operations on $\KH$ at all primes.
+Explicitly, we will achieve the following goals:
+
+\smallskip\noindent(PhD2a)
+Effectively describing structure inducing the action on $\KH$ of $\cA_p$ for any prime p.\par
+\smallskip\noindent(PhD2b)
+Designing and implementing algorithms for the computation of all Steenrod operations on $\KH$.\par
+\smallskip\noindent(PhD2c)
+Computing these invariants for $p=3,5,7$ and knots with up to 14 crossing.
+
+\smallskip\noindent This software's primary impact will be in the field of low-dimensional topology, enabling a more precise exploration of intricate properties related to knots and links.
+
+\smallskip\noindent\textbf{Methodology}.
+We have already agreed to collaborate with Cantero-Morán, who will serve as a secondary advisor.
+Furthermore, the support of ORCCA will ensure the quality of the resulting software.

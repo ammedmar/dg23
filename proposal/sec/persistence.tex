@@ -1,0 +1,69 @@
+% !TEX root = ../proposal.tex
+
+\section*{(2) Refinements and Novel Applications of Persistent Cohomology \\ (PhD3, MSc3, MSc4)}
+
+Persistent (co)homology is a powerful technique used in the field of topological data analysis.
+It serves as a valuable tool for analyzing and extracting topological features and structures from data, especially in the context of point clouds or other high-dimensional data representations.
+The core steps i the persistent (co)homology pipeline are the following:
+i) Through various standard techniques, construct from the given data triangulated spaces with a filtration
+\[
+X_0 \subseteq X_1 \subseteq X_2 \subseteq \dots \subseteq X_N \,.
+\]
+ii) Apply the (co)homology functor to obtain a diagram
+\[
+\rH^\bullet X_0 \leftarrow \rH^\bullet X_1 \leftarrow \dots \leftarrow \rH^\bullet X_N \,.
+\]
+iii) Summarize the resulting sequence of homologies into a computationally efficient invariant known as the ``barcode" of the filtration.
+A key feature of persistent (co)homology is the stability property, which asserts that, with appropriate metrics, the passage to barcodes maintains bounded distortion.
+
+Numerous high-performance implementations of algorithms for computing barcodes are available, such as \texttt{giotto-tda} \cite{medina2021giotto}, \texttt{ripser} \cite{bauer2021ripser}, and \texttt{gudhi} \cite{gudhi}.
+This is one of the main reasons explaining the significant impact this technique is having across scientific domains.
+Consult \cite{carlsson2021topological} for a fairly recent survey.
+However, it is important to recognize that the classical barcode, despite its utility, is not without substantial limitations, as it does not encode the way bars interact with each other.
+These limitations extend from those associated with (non-persistent) cohomology discussed in the previous section.
+
+The second goal of this research program is to develop finer computable invariants for persistent (co)homology, provide high-performance implementations for the computation of new and existing invariants, and identify domains of applicability where this techniques will proved domain specific insights.
+These software tools will enable the analysis of significantly larger datasets, offering ample examples to interpret these innovative topological signature of data within domain-specific contexts, such as molecular chemistry and neuroscience.
+
+\medskip\noindent\textbf{Earlier work}.
+Using the novel algorithm for the calculation of Steenrod squares introduced in \cite{medina2023fast_sq}, we effectively integrated finer information encoded by Steenrod operations, specifically, the action of $\cA_2$ on mod 2 cohomology, into the persistence (co)homology pipeline \cite{medina2022per_st}.
+The resulting invariant takes the form of a sequence of barcodes for $k \geq 0$, with $k = 0$ recovering the traditional mod 2 barcode. For $k > 0$, these barcodes are also stable and encode generalizations of self-intersection of cycles on a closed manifold. Importantly, they are computable.
+In fact, in collaboration with members of the \giottoTDA\ team, we developed \texttt{steenroder}, a tool for the computation of Steenrod barcodes.
+This tool played a crucial role in detecting the presence of Steenrod barcodes in real-world data, as detailed in \cite{medina2022per_st}, specifically within the conformation space of the cyclo-octane molecule.
+However, it is worth noting that the performance of this tool is not yet optimal.
+In the following section, we will describe how to improve its efficiency.
+
+In another significant conceptual advance towards enhancing persistent (co)homology with finer computable invariants, as discussed in \cite{memoli2022cup_length}, the authors introduced the notion of the cup-length invariant. This innovation incorporates a portion of the ring structure on cohomology into the persistent homology pipeline.
+More precisely, the cup-length of a graded ring is defined as the largest non-negative integer $\ell$ for which there exist positive-dimensional homogeneous elements $a_1, \dots, a_\ell$ within the ring such that their product, $a_1 \dots a_\ell$, is nonzero. The persistent version of this invariant is defined as a function over the filtration parameter.
+Regrettably, it is worth noting that as of now, there is no existing implementation of their algorithm.
+
+\medskip\noindent\textsc{High-performance \texttt{steenroder} and \texttt{cuplengther}}
+There are three steps in the computation of Steenrod barcodes:
+i) The first step involves computing the traditional barcode. This is accomplished through a matrix reduction routine that has been extensively optimized through the collaborative efforts of multiple researchers.
+For a cross-software performance comparison one can consult \cite{otter2017roadmap}.
+ii)~The second step utilizes a representative cocycle $\alpha$ for each bar to construct a representative cocycle $\beta$ for $\Sq^k[\alpha]$.
+This is done using the algorithm introduced in \cite{medina2023fast_sq}.
+iii)~Finally, the third step involves another matrix reduction procedure that examines the linear independency of the resulting Steenrod cocycles.
+The second step, the current bottleneck of \texttt{steenroder}, is quadratic on the length of the cocycle representative $\alpha$.
+The delays are caused by overly representatives with large support, and the lack of parallelization of the routine across cocycles.
+
+Additionally, advances on cocycle replacement will allow for the efficient implementation of an algorithm computing the persistent cup-length invariant.
+
+\medskip\noindent\textbf{Goals}.
+Improve the performance of \texttt{steenroder}, implement \texttt{cuplengther}, and test them on real-world data.
+Explicitly, my team will complete the following tasks:
+
+\smallskip\noindent(MSC3a)
+Parallelizing the construction of Steenrod cocycles across cocycle representatives.
+
+\smallskip\noindent(PhD3a)
+Replacing naively obtained cocycles with alternatives having smaller support.
+
+\smallskip\noindent(PhD3b) Implementing \texttt{cuplengther}, a tool for the computation of persistent cup-length.
+
+\smallskip\noindent(PhD3c)
+Obtaining a catalogue of topological signatures of densely sampled molecular conformation spaces.
+
+\smallskip\noindent\textbf{Methodology}.
+The software development components of this project will be conducted in collaboration with ORCCA for overall support.
+Additionally, for the specific application in chemistry, we will partner with the Theory and Computation research group at Western.

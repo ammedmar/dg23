@@ -1,0 +1,66 @@
+\documentclass{amsart}
+\input{style}
+\usepackage{parskip}
+\addbibresource{../usualpapers.bib}
+\addbibresource{../bibliography.bib}
+
+\title{Most Significant Contributions 9000}
+
+\begin{document}
+	\maketitle
+	\textbf{Theoretic topology: context}
+
+	Topology is the branch of mathematics that studies the properties of spaces preserved under continuous deformations, such as stretching and bending, but not tearing or gluing. The properties revealed by this perspective serve as a foundational layer for the study of more structured spaces, such as riemannian manifolds or algebraic varieties. The foundational layer is known as the homotopy type, and a primary goal of the field is to develop algebraic invariants for its study. A significant example of such an invariant is cohomology. While its distinguishing power has severe limitations, this (graded) abelian group can be effectively calculated by decomposing the space in question into simpler components, making it well suited for concrete applications.
+
+	1. \textbf{New formulas for cup-$i$ products and their axiomatics}
+
+	The work of Alexander and Whitney in the late 1930s introduced a natural ring structure on cohomology, increasing its discriminatory power. However, their construction broke an important symmetry. Steenrod's seminal 1947 work \cite{steenrod1947products} corrected this broken symmetry homotopically, introducing cup-i products, which in turn led to the definition of Steenrod squares, which increase the discriminatory power of cohomology and form a cornerstone of the field. New formulas were developed for these cup-i products by the PI in \cite{medina2023fast_sq}, which allowed him to prove that all constructions of cup-$i$ products in the literature agree axiomatically.
+
+	In 2014 \cite{lipshitz2014khovanov}, Lipshitz and Sarkar defined for any knot a cellular spectra whose cellular cochains recover the Khovanov homology $KH$ of the knot. By stable homotopy theory reasons, this shows the existence of Steenrod squares in $KH$. The authors then asked for a concrete construction of these using the know diagram directly. Cantero-Mor\'an \cite{cantero-moran2020khovanov} provided such construction adapting the PI's new formulas for cup-$i$ products. Subsequently, these formulas were implemented by Milstein on SAGE and used to compute Steenrod squares on knots with up to 14 crossings \cite{milstein2022khovanov}.
+	Recently, the PI has also developed cup-$(p,i)$ products \cite{medina2021may_st}, which will be used by his team, in collaboration with Cantero-Mor\'an, to develop software for the computation of all Steenrod operations in $KH$.
+
+	2. \textbf{Adem and Cartan relations at the cochain level}
+
+	Steenrod squares are related to the ring structure in cohomology by the Cartan formula. An effective cochain-level proof of this formula was developed by the PI \cite{medina2020cartan}, further enriched by the introduction of an open-source computational tool. Similarly, with G. Brumfiel and J. Morgan from Stanford and Columbia Universities respectively, the PI gave an effective proof of the Adem formula, which controls the iteration of Steenrod squares \cite{medina2021adem}.
+
+	A very significant application of our formulas was given by Gaiotto, Kapustin, and other physicist \cite{kapustin2017fermionic, barkeshli2021classification}.
+	They use them to classify low dimensional symmetry-protected fermionic topological phases of matter. This result illustrates the importance of constructive methods for the application of topology to condensed matter physics.
+	Recently, the PI has also provided an effective proof for the Cartan relation of all Steenrod operations \cite{medina2023oddcartan}, and his team will provide one for the Adem relation over all primes.
+
+	3. \textbf{A complete and effective algebro-homotopical invariant}
+
+	The cup-i products are part of a more general structure on the cochains of spaces known as an $E_\infty$-algebra, a notion controlled by so called $E_\infty$-operads. After groundbreaking work of M. Mandell \cite{mandell2006homotopy_type}, it is known that the $E_\infty$-algebra of a space satisfying suitable finiteness conditions encodes its entire homotopy type. No finitely presented $E_\infty$-operad can exist but, as shown by the PI, passing to the context of multiple inputs and outputs allows for the introduction of props whose associated operads are $E_\infty$ \cite{medina2020prop1,medina2021prop2}.
+
+	These new models were used by the PI to prove a conjecture of R. Kaufmann connecting various models in the literature \cite{kaufmann2009dimension}. Given its small number of generators and relations, the aforementioned $E_\infty$-operads are well suited to define $E_\infty$-algebras concretely. The PI initially accomplished this for simplicial sets in \cite{medina2020prop1}. Subsequently, in collaboration with R. Kaufmann, the approach was extended to cubical sets in \cite{medina2022cube_einfty}. Finally, working alongside A. Pizzi and P. Salvatore from the University of Rome, this methodology was further generalized to multisimplicial sets and used to study configuration spaces \cite{medina2022multisimplicial}. An important application of the cubical result is a proof, by the PI and M. Rivera from Purdue University, that Adams' comparison map is not only a quasi-isomorphism of monoidal coalgebras, as shown by H.J. Baues \cite{baues1998hopf}, but one of monoidal $E_\infty$-coalgebras \cite{medina2021cobar}.
+
+	\textbf{Applied topology: context}
+
+	....
+
+	4. \textbf{Topological Data Analysis: Giotto-TDA}
+
+	Topological Data Analysis (TDA) leverages concepts from topology to study the shape of data. One of the key tools in TDA is persistent homology, which provides a multi-scale description of the homological features of a data set. In simpler terms, TDA provides a way to identify and quantify features such as connected components, loops, and voids in data, and to understand their ``persistence" across multiple scales. This enables a robust, coordinate-free analysis of data and has found applications in various scientific fields such as biology, sensor networks, machine learning, and neuroscience. In a collaborative effort between the Swiss machine learning firm L2F, the Institute of Reconfigurable \& Embedded Digital Systems at HEIG-VD, and the Laboratory for Topology and Neuroscience at EPFL --where the PI was based at the time-- the package giotto-tda was developed. This Python library seamlessly combines high-performance topological data analysis with machine learning, using a scikit-learn-compatible API and cutting-edge C++ implementations \cite{medina2021giotto}.
+
+	Our project has garnered nearly 800 stars on GitHub and has been forked close to 200 times.
+	Furthermore, its code base plays a pivotal role in L2F's business proposal, serving as an exemplary demonstration of the technology transfer capabilities arising from the PI's research.
+
+	5. \textbf{Hyperharmonic analysis for the study of high-order information-theoretic signals}
+
+	...
+
+
+
+%	5. \textbf{Persistent Homology for Functionals}
+%
+%	Persistence homology is not only a cornerstone in applied topology, but it is also increasingly making a significant impact in the realm of theoretical mathematics. In a collaborative research endeavour with U.~Bauer and M. Schmahl from the University of M\"unich \cite{medina2022fuct_top}, we introduced a topological criterion on functionals ensuring that their persistent homology, in general a wild object, admits a manageable summarization as a persistence diagram. Notably, this existence result implies that functionals satisfying our criterion also satisfy generalized Morse inequalities.
+%
+%	To demonstrate the usability and reach of our result, we revisited the landmark Unstable Minimal Surface Theorem, originally formulated by Morse and Tompkins. We reformulated their seminal work within a contemporary, mathematically rigorous framework, thereby bringing a modern perspective to this classical theorem whose original proof had a gap. We expect that this application of persistent theory will bring the attention of functional analysts to this techniques and will be follow by more research in this new intersection.
+%
+%
+%	2. \textbf{Cup-i products and higher categories}
+%
+%	Steenrod operations lie at the heart of stable homotopy theory, whereas the free infinity categories generated by standard simplices \cite{street1987orientals} play a crucial role in higher category theory.
+%	It might seem surprising that there is a relation between these objects, but, in \cite{medina2020globular}, the PI discovered a connection in the form of a functor from a subcategory of chain complexes with cup-$i$ products to the category of strict infinity categories, and showed that the image of Steenrod's cup-$i$ products on the chains of standard simplices are precisely said free infinity categories.
+
+	% Progress in reconciling these two approaches was made by the PI, who developed a construction for the free n-category generated by the n-simplex, utilizing the cup-i products on its cochains \cite{medina2020globular}. In an ongoing collaboration with researchers at the Perimeter Institute, the PI is deepening the understanding of the relationship between functorial and state sum descriptions of TQFTs.
+\end{document}

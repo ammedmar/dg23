@@ -1,0 +1,34 @@
+Training Philosophy:
+
+Mathematics is a language and the field is constantly evolving.   When training an individual HQP this language, it helps me to know how s/he expects to use it, say after graduation.
+
+If an undergraduate (or MSc student) wants to continue to study Mathematics in graduate school, then I focus her on theory I know will be relevant.  If instead she wants to find a job, say at the CSE, then I emphasize speaking and writing mathematical ideas precisely and accurately.
+
+A common route for a PhD student is to take an academic job.  This requires her to discern how passionate she is about teaching and research.  One needs a balance of both passions to thrive in most academic positions, but most prefer one over the other.  Through repeated conversations with a student I try to help gauge her personal preferences so that when she seeks a job, she knows a good direction to look.  If she prefers teaching, then I point out there are jobs which offer a heavy teaching load balanced with a nominal research component.  Otherwise she might pursue a postdoc.
+
+Most postdocs aim to find an academic position which demands a heavier research contribution and a lighter teaching load.  Such positions are harder to find and more competitive, so it is important to have a good research portfolio.  Indeed, once she secures a tenure-track position and the clock starts, she will have a limited time to produce a sufficiently many sufficiently good papers.  A recently graduated postdoc needs to be encouraged to publish papers from her PhD thesis and then to move on.  This means finding new projects and developing breadth.
+
+As a trainer of HQP, it is my job to help all students to learn to hear, read, speak, and write the language and to be aware of trends and developments.  This is most easily done with a group of several students at various stages of study, e.g., more experienced students to serve as models and guides for newer students, new students to replace those who graduate, postdocs to represent other areas, etc.  With a critical mass, it can be nice to meet regularly as a group to facilitate interaction.  This allows relationships between members to develop and broadens everyone's horizons.  When appropriate, say before an upcoming seminar, someone can give a low-key lecture on relevant material, and on other occasions someone can share a milestone, question, or wisdom.
+
+Regardless of how many students I have at a time, I encourage them to attend suitable seminars.  I like an immersion approach mathematics, an approach I like for other languages.  This means listening to talks where one might not understand everything, but the portion understood increases over time.  Our subject is drive by questions and answers, and it is good for students to hear them from others.
+
+With all of my students I try to meet regularly, say once a week, in private.  If she is working on a project or is working on some exercises, then we discuss her work.  If it seems instructive and not obstructive, I ask for a written presentation of appropriate formality.  We go over it together and I give constructive feedback focused on improvements I think will make the biggest differences.
+
+I believe that when learn mathematics from a text, it helps to have a question in mind which reading may help answer.  I help students formulate questions I think are appropriate.  This may happen frequently, say as she prepares for exams.  Then I help to sieve old exams for questions or to cook up new onws.  Whatever level a student is at, I try to ask questions I think will help reach the next level.
+
+Training Plan:
+
+I currently have two PhD students, Herring and Ceballos.  Both of them need to pass qualifying exams within a year, and then each should be ready for research.  The projects proposed for them have been tailored to our mutual interests.  The biggest questions demand each masters several topics, e.g., basic algebra, algebraic geometry, probability, and graph theory.  I have them working together to prepare for the exams.  The projects for unknown PhD students have similar demands.  I am teaching a graduate course this term for the second time (on Expander Graphs) to complement the background given by the foundation courses.
+
+Real Roots of d-matching Polynomials: [1st PhD]
+
+This presently encompasses Objectives 1 and 2 in the proposal.  The essential goals are to better understand the zeros of the d-matching polynomial of an undirected graph G.  In [HPS] we left open the case where G has a self loop.  Herring has already made significant progress and led a group who showed all zeros are real when G is the n-cycle.  In his MSc thesis he mastered material (on graphs and fundamental groups) needed to understand [HPS], and he travelled to a workshop in Israel coorganized by my coauthor D. Puder.  Once Herring finishes his exam and the group finishes its paper, we will embark on these objectives.
+
+Graph Hypersurfaces: [2nd PhD]
+
+This is Objective 4 of the proposal, and I intend to pursue it with my other PhD student, Ceballos.  He has already completed a reading course with me on basic algebraic geometry, and is taking my graduate course on graphs.  Once he completes his exams, we will embark.  I have some initial small projects in mind to prepare him for the problem, e.g., to learn what the 'chip-firing group' of a graph is.  I also have several 'simple' examples of graph hypersurfaces for explicit study.
+
+Properties of d-matching Polynomials: [3rd Phd]
+
+This is Objective 3 and for an unknown future PhD student.  To prepare she will need to pass her exams, and I will enlist the help of Herring and Ceballos.  In three years might be a good time to reteach my course.  Until then, I have two typeset of notes: one produced by the students in this term's course; the nodes I used to prepare my lectures.  I would love to turn the latter into a book, but either set may be useful for training relevant background.  I hope to find a student interested in computer calculations since I think there are many things worth exploring and I have a lot of valuable (programming) experience to share.
+
