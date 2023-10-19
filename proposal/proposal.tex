@@ -1,41 +1,17 @@
-\documentclass[12pt]{amsart}
+\documentclass[12pt]{article}
+\usepackage{amsmath}
 \input{aux/style}
 \input{aux/usualcmds}
 \addbibresource{../usualpapers.bib}
 \addbibresource{../bibliography.bib}
 \input{aux/commands}
 
-\usepackage{csquotes}
-\usepackage{enumitem}
-\usepackage[letterpaper, margin=1.87cm]{geometry} % Sets paper size and margins
-\setlength{\parindent}{0pt}
-\usepackage{setspace} % For line spacing
-\usepackage{mathptmx} % Times New Roman for both text and math
-\usepackage[scaled=.92]{helvet} % Helvetica, scaled to match Times New Roman
-
-% set up 12pt Times New Roman
-\renewcommand{\rmdefault}{ptm}
-\renewcommand{\sfdefault}{phv}
-\renewcommand{\ttdefault}{pcr}
-
-% line spacing
-%\onehalfspacing % Alternatively, you can use \singlespacing to try to meet the "no more than six lines per inch" requirement
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-
-\title[Effective algebro-homotopical constructions]{Effective algebro-homotopical constructions \\ with applications to data science and quantum field theory}
-
-\author{Anibal~M.~Medina-Mardones}
-%\address{A.M-M., Max Planck Institute for Mathematics \and University of Notre Dame}
-%\email{\href{mailto:ammedmar@mpim-bonn.mpg.de}{ammedmar@mpim-bonn.mpg.de}}
-
+\defbibheading{bibliography}[\refname]{}
 \begin{document}
-	\vspace*{-0pt}
-	\maketitle
-	\thispagestyle{empty}
+%	\layout
 	\input{sec/introduction}
-	\input{sec/background}
 	\input{sec/constructions}
+	\input{sec/khovanov}
 	\input{sec/persistence}
 	\input{sec/physics}
 	\newpage

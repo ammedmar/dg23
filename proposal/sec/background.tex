@@ -1,8 +1,7 @@
 % !TEX root = ../proposal.tex
 
-\section*{Background}
-
-As mentioned in the introduction, Poincaré's definition of the cohomology of a space $X$ relies on its cochains, denoted simply as $\cochains$, which arise from a cellular decomposition of $X$.
+\smallskip\textsc{Background}.
+As mentioned in the introduction, Poincaré's definition of the cohomology of a space $X$ relies on its cochains, denoted simply as $\cochains$, which arise from a cellular decomposition of $X$, typically a triangulation.
 This construction is local in nature, allowing for a piecewise analysis of $X$, and is thus well-suited for concrete computations.
 The computer algebra system (CAS) \texttt{SageMath}, among others, is a tool where this approach to cohomology is implemented.
 Unfortunately, cohomology—or equivalently, the quasi-isomorphism type of $\cochains$—omits crucial homotopical information.
@@ -15,9 +14,10 @@ To distinguish them we can consider Steenrod squares on $\rH^\bullet$ which are 
 These enhancements on $\cochains$ would not suffice to distinguish a similar comparison involving a quaternionic projective space.
 In that case, we can use odd prime power operations, but these are not available on mainstream computer algebra systems yet.
 
-\smallskip
-A ground-breaking result in modern homotopy theory, due to Mandell \cite{mandell2006homotopy_type}, is that, under certain finiteness assumptions, all the homotopical information of $X$ is captured by an enhancement of the cup-$i$ product structure on $\cochains$.
-This complete algebro-homotopical invariant, known as an $E_\infty$-algebra, is the conceptual cornerstone of our program, since, after work by the author and others, it can be given a concrete local description (\cite{mcclure2003multivariable,berger2004combinatorial,medina2020prop1}).
+A ground-breaking result in modern homotopy theory, due to Mandell \cite{mandell2001padic,mandell2006homotopy_type}, asserts that under certain finiteness assumptions, all the homotopical information of $X$ is captured by an enhancement of the cup-$i$ product structure on $\cochains$.
+This complete invariant is known as an $E_\infty$-algebra and serves as the conceptual cornerstone of our program.
+The author and others provided a concrete local description of this structure on $\cochains$ \cite{medina2020prop1, mcclure2003multivariable, berger2004combinatorial}, which opened the door for the development of effective constructions of progressively richer homotopical invariants.
+Consequently, it enabled their potential integration into computer algebra systems, as well as into more concrete fields such as knot theory, toric geometry, and lattice quantum field theory.
 
 %%As mentioned in the introduction, Poincar\'e's definition of the cohomology of a space $X$ relies on the cochains $\cochains$ of a cellular decomposition of $X$.
 %%This construction is local and well-suited for concrete computations.

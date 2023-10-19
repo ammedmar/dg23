@@ -1,62 +1,97 @@
 % !TEX root = ../proposal.tex
 
-\section*{(3) Topological Quantum Field Theories: Bridging State Sum and Functorial Descriptions (PostDoc, MSc5)}
-
-The significance of topology in condensed matter physics is exemplified by the 2016 Nobel Prize in Physics, awarded for ``theoretical discoveries of topological phase transitions and topological phases of matter."
-There are primarily two approaches to defining these topological quantum field theories (TQFTs).
-Traditionally, these quantum systems are presented using \textit{lattice models} which, intuitively, are given by a Hamiltonian presented as a sum of local terms on a Hilbert space associated to a lattice in $\R^n$.
-We think of these as defined on flat space.
-One such system is said to be \textit{gapped} if the spectrum of the Hamiltonian is bounded away from $0$, and two Hamiltonians represent the same \textit{phase} if there exists a deformation between them consisting only of systems that remain bounded from below.
-An important class of topological phases are the \textit{invertible} ones, which are those that can be combined with another to give the trivial phase.
-The classification of these is expected to be controlled by generalized cohomology theories as pioneered through key examples by Kitaev, Kapustin, and other physicists \cite{kitaev2009periodic,kapustin2015cobordism}.
-
-Given a lattice model and a triangulation $X$ of a spacetime manifold $M$, one can construct a Lagrangian description of the theory. In this description, fields and the action functional are expressed using cochain-level structures, such as Stiefel--Whitney cochains, cup-$i$ products, and Adem coboundaries. Using a state sum construction, which involves a summation over fields, one can compute the invariants associated with $X$. Furthermore, the theory's subdivision invariance ensures that these are associated to $M$.
-
-The functorial approach to TQFTs, pioneered by Atiyah and Segal \cite{atiyah1988tqft,segal1988conformal}, organizes the discussion around functors from the category of manifolds and bordisms between them to an enhancement of the category of complex vector spaces
-\begin{equation}\label{eq:tqft}
-	\mathrm{Bord} \to \mathrm{Vect}.
-\end{equation}
-A strong form of this functorial viewpoint is known as the cobordism hypothesis, which replaces \eqref{eq:tqft} with a higher categorical versions \cite{baez1995higher,lurie2008classification}.
-In the celebrated work of Hopkins and Freed \cite{freed2021reflection}, this functorial viewpoint has been used to relate the classification of invertible TQFTs to stable homotopy theory \cite{freed2021reflection}, in line with what physicist expected, but the methods are wildly different, and the way the higher categorical theory emerges from the effective methods on discrete space-times is a key question in the field.
-We cite from a lecture given by Hopkins in Regensburg:\footnote{Time 18:00 in \url{https://mediathek2.uni-regensburg.de/playthis/58fddd43542660.38096595}} ``\textit{This story is far from being understood, and there is a big arc of research that goes into trying to really derive this emerging structure from lattice models, and this is very interesting and very difficult area right now."}
-
-The third goal of this research program is to elucidate the interplay between functorial and lattice theoretic methods used in the classification of invertible topological phases.
-What distinguishes our approach from others and serves as an underpinning connecting them is Street's free $n$-category on the $n$-simplex \cite{street1987orientals}, the so-called $n^\text{th}$ oriental $\mathcal{O}_n$.
-The aptness of these objects for the stated goal arises from their grounding on both the discrete and higher categorical settings.
-
-\medskip\noindent\textsc{Functorial state sum data}
-In collaboration with researchers at the Perimeter Institute and a postdoctoral scholar affiliated with both institutions, we will accomplish the following tasks:
-
 \smallskip
-\noindent(3a) Relate lattice theoretic descriptions of TQFTs to Street's orientals.\par
-\noindent(3b) Relate Street's orientals to functorial descriptions of TQFTs.\par
-\noindent(3c) Define new TQFT's.\par
-\noindent(3d) Validate the Freed--Hopkins functorial classification of invertible topological phases.
+{\centering (4) \textsc{A bridge between state sum and functorial definitions of TQFTs} (MSc6, PostDoc)\par}
 
-\medskip\noindent\textbf{Earlier work}.
-The work by Gaiotto, Kapustin, and other physicists in the classification of low-dimensional invertible fermionic topological phases \cite{gaiotto2016spin, barkeshli2021classification} heavily relies on the cup-$i$ products of Steenrod and our formulas for Cartan and Adem coboundaries \cite{medina2020cartan, medina2021adem}.
-In fact, these applications served as the primary motivation for our work.
-We also mentioned earlier work by some of the authors above, using related ideas, to constructed cochain approximations to the Pontryagin dual of the spin bordism spectrum, the type of object that appears in the Freed-Hopkins classification \cite{brumfiel2016pontrjagin, brumfiel2018pontrjagin}.
+\smallskip Let us return to the trade-off between concreteness and functoriality discussed in the introduction, now in the context of quantum physics.
 
-The connection between Steenrod's cup-$i$ products and Street's orientals was established in \cite{medina2020globular}, where the author surprisingly demonstrated that the intricate structure of $\mathcal{O}_n$ can be naturally derived from the cup-$i$ products of Steenrod.
-Using these canonical categories, one can define the $n$-category generated by a simplicial set $X$
-\begin{equation}\label{eq:colimit}
-	\cO(X) = \colim_{\gsimplex\, \downarrow X} \cO_n.
-\end{equation}
 
-\medskip\noindent\textbf{Future work}.
-When $X$ is a triangulation of an $n$-manifold $M$, we will enhance the above colimit to reflect tangential structure on $M$, with orientations and framings being the key examples.
-We will then introduce the notion of functorial state sum data as a cone under the the tangentially enhanced Street diagram, whose apex is a sufficiently dualizable $n$-category.
-We will then obtain invariants like the partition function using the colimit description of $\cO(X)$.
-Preliminary investigations have shown that this method recovers known state sum descriptions of low dimensional TQFTs, incuding Turaev--Viro's \cite{turaev1992invariants}, and, given the systematic nature of our approach, it will enable us to define new theories, including a non-invertible version of Dijkgraaf-Witten theory \cite{dijkgraaf1990topological}.
-The techniques developed in this project will also have an impact on theoretical mathematics.
-For example, the author's master student Aaron Huntly is proving a the following conjecture emanating from our preliminary work on this project: An $A_\infty$-algebra, i.e., a representation of the Stasheff operad in the category of chain complexes $\Ch$, is the exact same data as a cone over the traditional (i.e. non-tangentially enhanced) Street diagram with apex the desuspension $\rB\Ch$.
+%\medskip\noindent\textbf{Deliverable}.
+%A bridge between the state-sum theoretic and functorial classifications of invertible phases.
 
-Having a mature theory of functorial state sum data and a deeper understanding of its relationship to cochain level structures will allow us to bridge the functorial and state sum approaches to the classification of invertible topological phases, and, by doing so, explaining the connection between the work of Gaiotto--Kapustin and Freed--Hopkins.
+\smallskip\noindent\textbf{Background}.
+The significance of topology in condensed matter physics is exemplified by the 2016 Nobel Prize in Physics, awarded for ``theoretical discoveries of topological phase transitions and topological phases of matter."
+There are primarily two approaches to defining these TQFT's.
+
+\quad On one hand, they are presented using \textit{lattice models}, which can extended to more general space-times using triangulations.
+An important class of these are the so-called symmetry-protected invertible topological phases.
+Using cochain level structures including cup-$i$ products, and Cartan and Adem coboundaries, these have been classified in low dimensions by Kitaev, Gaiotto--Kapustin, and other physicists \cite{kitaev2009periodic, kapustin2015cobordism, barkeshli2021classification}.
+The available examples support their thesis that such classification is controlled by generalized cohomology theories.
+
+\quad On the other hand, the functorial approach to TQFTs, pioneered by Atiyah and Segal \cite{atiyah1988tqft,segal1988conformal}, organizes the discussion around higher categorical versions of functors from the category of manifolds and bordisms to an enhancement of the category of complex vector spaces \cite{baez1995higher,lurie2008classification}.
+In the celebrated work of Hopkins and Freed \cite{freed2021reflection}, this functorial viewpoint was used to relate the classification of invertible topological phases to stable homotopy theory \cite{freed2021reflection}, in line with what physicist expected, but the methods are wildly different, and the way the higher categorical theory emerges from the effective methods on discrete space-times is a key question in the field.
+We cite from a lecture given by Hopkins in Regensburg [Move to biblio]:
+%\footnote{Time 18:00 in \url{https://mediathek2.uni-regensburg.de/playthis/58fddd43542660.38096595}}
+``\textit{This story is far from being understood, and there is a big arc of research that goes into trying to really derive this emerging structure from lattice models, and this is very interesting and very difficult area right now."}
+
+\medskip\noindent\textbf{Deliverables}.
+At least four publications on high-impact journals.
+
+\medskip\noindent\textbf{Strategic partnership}.
+This project will be accomplished in collaboration with researchers from the Perimeter Institute, including L. M\"uller and A. Turzillo.
+
+\medskip\noindent\textbf{Key idea}.
+What sets our approach apart from others—and serves as a unifying thread—is our use of Street's free $n$-category on the $n$-simplex \cite{street1987orientals}, commonly referred to as the $n^\th$ oriental $\cO_n$.
+The aptness of this object for the stated goal arises from their grounding on both the discrete and higher categorical settings.
+Using these canonical categories, one can define the $n$-category generated by a triangulated space $X$ as $\cO(X) = \colim_{\gsimplex\, \downarrow X} \cO_n$.
+The connection between Steenrod's cup-$i$ products, used in the lattice formulas, and Street's orientals was established in \cite{medina2020globular}, where the author demonstrated that the intricate structure of $\mathcal{O}_n$ can be naturally derived from the cup-$i$ products of Steenrod.
 
 \medskip\noindent\textbf{Methodology}.
-This project will be accomplished in collaboration with researchers at the Perimeter Institute, including Lukas M\"uller and Alex Turzillo.
-With the support of this institution we will also involve a postdoctoral scholar in this project with a background in both topology and physics.
+When $X$ is a triangulation of an $n$-manifold $M$, we will enhance the above colimit to reflect tangential structure on $M$, with orientations and framings being the key examples.
+We will introduce the notion of \textit{functorial state sum data} as a cone under the the tangentially enhanced Street diagram, whose apex is a sufficiently dualizable $n$-category.
+We will then obtain invariants like the partition function using the colimit description of $\cO(X)$.
+Preliminary investigations have shown that this method recovers known state sum descriptions of low dimensional TQFTs, including Turaev--Viro's \cite{turaev1992invariants}, and, given the systematic nature of our approach, it will enable us to define new theories, including a non-invertible version of Dijkgraaf--Witten theory \cite{dijkgraaf1990topological}.
+
+\quad The techniques developed in this project will also have an impact on theoretical mathematics.
+For example, my student Aaron Huntly (\underline{MSc6}) will prove the following conjecture emanating from our preliminary work on this project: An $A_\infty$-algebra, i.e., a representation of the Stasheff operad \cite{loday2004stasheff} in the category of chain complexes $\Ch$, is the exact same data as a cone over the traditional (i.e. non-tangentially enhanced) Street diagram with apex the desuspension $\rB\Ch$.
+%The key insight for this statement comes from convex polytopes, particularly, from a surprising connection between the $n$-simplex and the $(n-2)$-associahedra.
+
+\medskip\noindent\textbf{Significance}.
+Having a mature theory of functorial state sum data and a deeper understanding of its relationship to cochain level structures will allow us to bridge the functorial and state sum approaches to the classification of invertible topological phases, and, by doing so, explaining the connection between the approaches taken by, in one hand, Gaiotto--Kapustin and, on the other, Freed--Hopkins.
+Additionally, this viewpoint will allow us to define new TQFTs.
+
+\medskip\noindent\textbf{Future work}.
+The cochain level structure used by Gaiotto--Kapustin relates to primary and secondary cohomology operations at the even prime only.
+We will use the accomplishments of both Objective (1) and (4) to enrich with odd prime cohomology operations the classification of TQFTs.
+
+
+%(\underline{PostDoc})
+
+%\medskip\noindent\textsc{Functorial state sum data}
+%In collaboration with researchers at the Perimeter Institute and a postdoctoral scholar affiliated with both institutions, we will accomplish the following tasks:
+%
+%\smallskip
+%\noindent(3a) Relate lattice theoretic descriptions of TQFTs to Street's orientals.\par
+%\noindent(3b) Relate Street's orientals to functorial descriptions of TQFTs.\par
+%\noindent(3c) Define new TQFT's.\par
+%\noindent(3d) Validate the Freed--Hopkins functorial classification of invertible topological phases.
+%
+%\medskip\noindent\textbf{Earlier work}.
+%The work by Gaiotto, Kapustin, and other physicists in the classification of low-dimensional symmetry protected invertible fermionic topological phases \cite{gaiotto2016spin, barkeshli2021classification} heavily relies on the cup-$i$ products of Steenrod and our formulas for Cartan and Adem coboundaries \cite{medina2020cartan, medina2021adem}.
+%In fact, these application in physics served as the primary motivation for our work.
+%We also mentioned work by the PI's coauthors Brumfiel and Morgan \cite{brumfiel2016pontrjagin, brumfiel2018pontrjagin}, where they used these ideas to constructed cochain approximations to the Pontryagin dual of the spin bordism spectrum, the type of object that appears in the Freed--Hopkins classification.
+%
+%The connection between Steenrod's cup-$i$ products and Street's orientals was established in \cite{medina2020globular}, where the PI surprisingly demonstrated that the intricate structure of $\mathcal{O}_n$ can be naturally derived from the cup-$i$ products of Steenrod.
+%Using these canonical categories, one can define the $n$-category generated by a simplicial set $X$
+%\begin{equation}\label{eq:colimit}
+%	\cO(X) = \colim_{\gsimplex\, \downarrow X} \cO_n.
+%\end{equation}
+%
+%\medskip\noindent\textbf{Methodology}.
+%When $X$ is a triangulation of an $n$-manifold $M$, we will enhance the above colimit to reflect tangential structure on $M$, with orientations and framings being the key examples.
+%We will then introduce the notion of functorial state sum data as a cone under the the tangentially enhanced Street diagram, whose apex is a sufficiently dualizable $n$-category.
+%We will then obtain invariants like the partition function using the colimit description of $\cO(X)$.
+%Preliminary investigations have shown that this method recovers known state sum descriptions of low dimensional TQFTs, incuding Turaev--Viro's \cite{turaev1992invariants}, and, given the systematic nature of our approach, it will enable us to define new theories, including a non-invertible version of Dijkgraaf-Witten theory \cite{dijkgraaf1990topological}.
+%
+%(MSc5) The techniques developed in this project will also have an impact on theoretical mathematics.
+%For example, the PI's current master student Aaron Huntly will prove the following conjecture emanating from our preliminary work on this project: An $A_\infty$-algebra, i.e., a representation of the Stasheff operad \cite{loday2004stasheff} in the category of chain complexes $\Ch$, is the exact same data as a cone over the traditional (i.e. non-tangentially enhanced) Street diagram with apex the desuspension $\rB\Ch$.
+%The key insight for this statement comes from convex polytopes, particularly, from a surprising connection between the $n$-simplex and the $(n-2)$-associahedra.
+%
+%(PostDoc) Having a mature theory of functorial state sum data and a deeper understanding of its relationship to cochain level structures will allow us to bridge the functorial and state sum approaches to the classification of invertible topological phases, and, by doing so, explaining the connection between the work of Gaiotto--Kapustin and Freed--Hopkins.
+
+
+%This project will be accomplished in collaboration with researchers at the Perimeter Institute, including Lukas M\"uller and Alex Turzillo.
+%With the support of this institution we will also involve a postdoctoral scholar in this project with a background in both topology and physics.
 
 %\medskip\noindent\textsc{Street orientals and functorial field theories} The free $n$-category generated by the standard $n$-simplex is a fundamental object in category theory introduced by Street in \cite{street1987orientals}.
 %Together with Lukas M\"uller and Alex Turzillo of the Perimeter Institute we are exploring the use of this concept as the underpin for a connection between functorial description and triangulations.

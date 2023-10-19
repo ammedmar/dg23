@@ -1,0 +1,46 @@
+% !TEX root = ../proposal.tex
+
+\smallskip
+{\centering (2) \textsc{Steenrod operations on Khovanov homology of knots and links} (MSc3, PhD3)\par}
+
+\smallskip\textbf{Deliverables}.
+a) Software computing Steenrod operations on Khovanov homology over any prime.
+b) A comprehensive catalogue of these topological invariants for knots with up to 18 crossings.
+c) At least four publications in high-impact journals.
+
+\smallskip\textbf{Strategic partnerships}.
+To ensure the success of this project, we will again leverage ORCCA's vast expertise in software development and high-performance computing.
+Additionally, we will continue to collaborate with Cantero-Mor\'an, who is an expert in Khovanov homology.
+The same caveat made in (1) about \texttt{Maple} is in place here.
+
+\smallskip\textbf{Background}.
+Khovanov homology $\KH$ is a powerful algebraic invariant of knots and links which refines the Jones polynomial \cite{khovanov2000khovanov}.
+It is effectively computable from a chain complex associated with a knot diagram, and several implementations of this routine exist.
+A ground-breaking result of two teams (\cite{lipshitz2014khovanov,kriz2016khovanov}) proved that this invariant can be obtained from a cellular spectrum in the sense of stable homotopy theory; which implies, indirectly, that $\mathrm{KH_\bullet}$ has an action of the Steenrod algebra $\cA_p$ for any prime $p$.
+
+\smallskip\textbf{Key idea}.
+The Khovanov spectrum of a link or knot can be modelled by an object that is fairly similar to a triangulated space, a semi-simplicial object in the Burnside category.
+We will generalize our effective algebro-homotopical constructions from tringulated spaces to these type of objects,
+
+\smallskip\noindent\textbf{Methodology}.
+This key idea was pioneered by Cantero-Mor\'an in \cite{cantero-moran2020khovanov}.
+He used my formulas for cup-$i$ products \cite{medina2023fast_sq} to effectively construct Steenrod squares on Khovanov homology.
+His formulas generalize those of Lipshitz and Sakar, which dealt with the computation of $\Sq^1$ and $\Sq^2$ \cite{lipshitz2014steenrod} only.
+These two operations were implemented by Seed \cite{seed2012khovanov} and, last year, all squares were implemented into \texttt{SAGE} by Milstein using Cantero-Mor\'an's effective constructions \cite{milstein2022khovanov}.
+These developments have provided a complete treatment of Steenrod operations on $\KH$ at the even prime.
+(\underline{MSc3}) will conduct a performance profiling of Mildstein's Steenrod squares computation tool, which is currently implemented in \texttt{Python}.
+Following this analysis, we will employ optimization strategies such as code parallelization, porting the code to a more performance-efficient programming language, and then binding these optimized routines back into the original \texttt{Python} codebase.
+This optimization will enable (MSc3) to compute Steenrod squares for all prime knots with up to 18 crossings, surpassing Mildstein's existing state-of-the-art analysis, which is restricted to 14 crossings.
+(\underline{PhD3}) will provide a comprehensive analysis of Steenrod operations on $\KH$ for odd primes.
+The initial phase involves adapting my cup-$(p,i)$ products \cite{medina2021may_st}, originally developed for triangulated spaces, to fit the context of semi-simplicial objects in the Burnside category.
+Preliminary investigations we have conducted with Cantero-Mor\'an indicate that this adaptation is both intricate and intellectually stimulating, revealing connections to Tate cohomology and cochain level stability.
+Subsequently, (PhD3) will build upon the codebases developed by Mildstein and (MSc3) to create a high-performance computational tool for evaluating Steenrod operations on $\KH$.
+This tool will enable the computation of these topological invariants for all prime knots with up to 18 crossings.
+
+\smallskip\textbf{Significance}.
+Our work will provide a comprehensive framework for computing Steenrod operations on Khovanov homology across both even and odd primes.
+This fills an existing gap in the literature and gives researchers a new, effective toolkit for exploring algebraic structures associated with knot invariants.
+Overall, the project promises to elevate the state of the art in computational topology, extending its reach and making it more accessible for investigations in both pure and applied mathematical sciences.
+
+\smallskip\textbf{Future work}.
+Using the key idea stated above and the accomplishments of both Objective (1) and (2), we will incorporate secondary operations into the analysis of knots and links.

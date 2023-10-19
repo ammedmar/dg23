@@ -1,69 +1,54 @@
 % !TEX root = ../proposal.tex
 
-\section*{(2) Refinements and Novel Applications of Persistent Cohomology \\ (PhD3, MSc3, MSc4)}
+\smallskip
+{\centering (3) \textsc{Steenrod barcodes \& persistent cup-length of real-world data} (MSc4-5, PhD4)\par}
 
-Persistent (co)homology is a powerful technique used in the field of topological data analysis.
-It serves as a valuable tool for analyzing and extracting topological features and structures from data, especially in the context of point clouds or other high-dimensional data representations.
-The core steps i the persistent (co)homology pipeline are the following:
-i) Through various standard techniques, construct from the given data triangulated spaces with a filtration
-\[
-X_0 \subseteq X_1 \subseteq X_2 \subseteq \dots \subseteq X_N \,.
-\]
-ii) Apply the (co)homology functor to obtain a diagram
-\[
-\rH^\bullet X_0 \leftarrow \rH^\bullet X_1 \leftarrow \dots \leftarrow \rH^\bullet X_N \,.
-\]
-iii) Summarize the resulting sequence of homologies into a computationally efficient invariant known as the ``barcode" of the filtration.
-A key feature of persistent (co)homology is the stability property, which asserts that, with appropriate metrics, the passage to barcodes maintains bounded distortion.
+\medskip\noindent\textbf{Deliverables}.
+a) High-performance implementation of tools for the computation of Steenrod barcodes and persistent cup-length.
+b) A catalogue of these for densely sampled molecular conformation spaces.
+c) At least six publications in high-impact journals.
 
-Numerous high-performance implementations of algorithms for computing barcodes are available, such as \texttt{giotto-tda} \cite{medina2021giotto}, \texttt{ripser} \cite{bauer2021ripser}, and \texttt{gudhi} \cite{gudhi}.
-This is one of the main reasons explaining the significant impact this technique is having across scientific domains.
-Consult \cite{carlsson2021topological} for a fairly recent survey.
-However, it is important to recognize that the classical barcode, despite its utility, is not without substantial limitations, as it does not encode the way bars interact with each other.
-These limitations extend from those associated with (non-persistent) cohomology discussed in the previous section.
+\smallskip\textbf{Strategic partnerships}.
+As before, the expertise of ORCCA will play a critical role in this endeavor. We will also collaborate with U. Lupo from EPFL, the maintainer of \texttt{giottoTDA}, to seamlessly integrate our newly developed tools into this widely-used topological data analysis (TDA) platform.
+Additionally, we will join forces with F.~Mémoli from Ohio State University for the development of \texttt{cuplengther}.
 
-The second goal of this research program is to develop finer computable invariants for persistent (co)homology, provide high-performance implementations for the computation of new and existing invariants, and identify domains of applicability where this techniques will proved domain specific insights.
-These software tools will enable the analysis of significantly larger datasets, offering ample examples to interpret these innovative topological signature of data within domain-specific contexts, such as molecular chemistry and neuroscience.
+\smallskip\noindent\textbf{Background}.
+Persistent homology is a central method in TDA that quantifies the topological features of a dataset at various spatial resolutions, often represented as a so-called \textit{barcode}.
+High-performance algorithmic implementations for the computation of barcodes like \texttt{giottoTDA} \cite{medina2021giotto}, \texttt{ripser} \cite{bauer2021ripser}, and \texttt{gudhi} \cite{maria2014gudhi} have significantly contributed to its broad adoption across various scientific disciplines; for a recent survey, see \cite{carlsson2021topological}.
+However, it is crucial to acknowledge that the basic barcode obtained this way has notable limitations paralleling the inherent issues of (non-persistent) cohomology discussed in (1).
+It is natural then to envision enhancing persistent cohomology, without loosing effective computability, with additional structure present in cohomology.
+For example, with the action of the Steenrod algebra $\cA_p$ for some $p$ and its ring structure.
 
-\medskip\noindent\textbf{Earlier work}.
-Using the novel algorithm for the calculation of Steenrod squares introduced in \cite{medina2023fast_sq}, we effectively integrated finer information encoded by Steenrod operations, specifically, the action of $\cA_2$ on mod 2 cohomology, into the persistence (co)homology pipeline \cite{medina2022per_st}.
-The resulting invariant takes the form of a sequence of barcodes for $k \geq 0$, with $k = 0$ recovering the traditional mod 2 barcode. For $k > 0$, these barcodes are also stable and encode generalizations of self-intersection of cycles on a closed manifold. Importantly, they are computable.
-In fact, in collaboration with members of the \giottoTDA\ team, we developed \texttt{steenroder}, a tool for the computation of Steenrod barcodes.
+\medskip\noindent\textbf{Key idea}.
+We will generalize our effective algebro-homotopical constructions from triangulated spaces to nested families of triangulated spaces, the type of objects appearing in the multi-scale analysis of data.
+
+\medskip\noindent\textbf{Methodology}.
+We successfully used this idea in \cite{medina2022per_st}.
+Starting with my formulas for cup-$i$ products \cite{medina2023fast_sq} we incorporated the action of $\cA_2$ into the persistent pipeline.
+The resulting invariant is a sequence of barcodes for $k \geq 0$, where $k = 0$ corresponds to the basic mod 2 barcode.
+For $k > 0$, these barcodes are stable and encode generalizations of the self-intersection of cycles on a closed manifold. Importantly, they are computable.
+In fact, in collaboration with members of the \texttt{giottoTDA} team, we developed \texttt{steenroder}, a tool for the computation of mod 2 Steenrod barcodes.
 This tool played a crucial role in detecting the presence of Steenrod barcodes in real-world data, as detailed in \cite{medina2022per_st}, specifically within the conformation space of the cyclo-octane molecule.
-However, it is worth noting that the performance of this tool is not yet optimal.
-In the following section, we will describe how to improve its efficiency.
+However, the performance of this tool is not yet optimal and it is restricted to Steenrod operations at the even prime.
+(\underline{MSc4})
+will focus on enhancing the performance of \texttt{steenroder}, which is currently implemented in \texttt{Python}.
+Initially, (MSc4) will tackle the problem of identifying cocycle representatives for persistent cohomology that have minimal support, drawing on similar optimization studies for persistent homology representatives \cite{minimal, obayashi2018optimal}.
+Subsequently, (MSc4) will implement parallel processing for constructing Steenrod cocycles from these optimized cocycle representatives.
+This advancement will significantly expedite the computation of mod 2 Steenrod barcodes, thereby making it feasible to create a comprehensive catalogue of this invariant for molecular conformation spaces.
+(\underline{PhD4}) will extend the capabilities of \texttt{steenroder} to support all prime numbers.
+Firstly, (PhD4) will utilize the author's formulas for cup-$(p,i)$ products \cite{medina2021may_st}, along with the algorithms of (1), to develop a computational framework for mod $p$ Steenrod barcodes.
+Upon completing this initial theoretical groundwork, (PhD4) will proceed to create a high-performance implementation of this new algorithm.
+This enhancement will then be integrated into the existing \texttt{steenroder} codebase, thereby extending its utility across primes.
+Finally, this tool will be used to enhance the catalogue of topological invariants of molecular conformation spaces.
+(\underline{MSc5})
+will implement another pioneering enhancement in persistent cohomology: the notion of persistent cup-length, introduced by M\'emoli's team at Ohio State University \cite{memoli2022cup_length}.
+This innovative approach incorporates elements of the ring structure in cohomology into the persistent pipeline.
+Despite its theoretical promise, no computational implementation currently exists.
+Drawing upon our expertise developing high-performance topological software and in collaboration with M\'emoli, (MSc5) will develop \texttt{cuplenghter}, a specialized tool for computing this nuanced invariant.
+The tool will subsequently be used to augment the existing catalogue of topological invariants for molecular conformation spaces.
 
-In another significant conceptual advance towards enhancing persistent (co)homology with finer computable invariants, as discussed in \cite{memoli2022cup_length}, the authors introduced the notion of the cup-length invariant. This innovation incorporates a portion of the ring structure on cohomology into the persistent homology pipeline.
-More precisely, the cup-length of a graded ring is defined as the largest non-negative integer $\ell$ for which there exist positive-dimensional homogeneous elements $a_1, \dots, a_\ell$ within the ring such that their product, $a_1 \dots a_\ell$, is nonzero. The persistent version of this invariant is defined as a function over the filtration parameter.
-Regrettably, it is worth noting that as of now, there is no existing implementation of their algorithm.
+\smallskip\textbf{Significance}.
+This project represents a crucial step forward in advancing both the theory and practice of TDA, making persistent cohomology more descriptive and applicable to a broader range of scientific challenges.
 
-\medskip\noindent\textsc{High-performance \texttt{steenroder} and \texttt{cuplengther}}
-There are three steps in the computation of Steenrod barcodes:
-i) The first step involves computing the traditional barcode. This is accomplished through a matrix reduction routine that has been extensively optimized through the collaborative efforts of multiple researchers.
-For a cross-software performance comparison one can consult \cite{otter2017roadmap}.
-ii)~The second step utilizes a representative cocycle $\alpha$ for each bar to construct a representative cocycle $\beta$ for $\Sq^k[\alpha]$.
-This is done using the algorithm introduced in \cite{medina2023fast_sq}.
-iii)~Finally, the third step involves another matrix reduction procedure that examines the linear independency of the resulting Steenrod cocycles.
-The second step, the current bottleneck of \texttt{steenroder}, is quadratic on the length of the cocycle representative $\alpha$.
-The delays are caused by overly representatives with large support, and the lack of parallelization of the routine across cocycles.
-
-Additionally, advances on cocycle replacement will allow for the efficient implementation of an algorithm computing the persistent cup-length invariant.
-
-\medskip\noindent\textbf{Goals}.
-Improve the performance of \texttt{steenroder}, implement \texttt{cuplengther}, and test them on real-world data.
-Explicitly, my team will complete the following tasks:
-
-\smallskip\noindent(MSC3a)
-Parallelizing the construction of Steenrod cocycles across cocycle representatives.
-
-\smallskip\noindent(PhD3a)
-Replacing naively obtained cocycles with alternatives having smaller support.
-
-\smallskip\noindent(PhD3b) Implementing \texttt{cuplengther}, a tool for the computation of persistent cup-length.
-
-\smallskip\noindent(PhD3c)
-Obtaining a catalogue of topological signatures of densely sampled molecular conformation spaces.
-
-\smallskip\noindent\textbf{Methodology}.
-The software development components of this project will be conducted in collaboration with ORCCA for overall support.
-Additionally, for the specific application in chemistry, we will partner with the Theory and Computation research group at Western.
+\smallskip\textbf{Future work}.
+Using the key idea stated above and the accomplishments of both Objective (1) and (3), we will incorporate secondary operations into the persistent pipeline.

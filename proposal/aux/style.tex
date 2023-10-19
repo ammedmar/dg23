@@ -3,81 +3,45 @@
 \usepackage{mathtools}
 \usepackage{tikz-cd}
 \usepackage{mathbbol} % changes \mathbb{} and adds more support
+\usepackage{csquotes}
+\usepackage{enumitem}
+\usepackage{setspace} % For line spacing
+\usepackage{mathptmx} % Times New Roman for both text and math
+\usepackage[scaled=.92]{helvet} % Helvetica, scaled to match Times New Roman
+
+% set up 12pt Times New Roman
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\ttdefault}{pcr}
+
+%\usepackage{layout}
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+\usepackage[letterpaper,
+	margin=1.87cm,
+	hoffset=0cm,
+	voffset=0cm,
+	headheight=0cm,
+	headsep=0cm,
+	marginparwidth=0cm,
+	marginparsep=0cm,
+	footskip=0cm]{geometry} % Sets paper size and margins
+
+% line spacing
+%\onehalfspacing % Alternatively, you can use \singlespacing to try to meet the "no more than six lines per inch" requirement
 
 % bibliography
 \usepackage[
 	backend=biber,
-	style=alphabetic, % alphabetic, numeric, remove sorting=none
+	style=numeric, % alphabetic, numeric, remove sorting=none
 	sorting=nyt,
-	backref=true,
+	backref=false,
 	url=false,
 	doi=false,
 	isbn=false,
 	eprint=false]{biblatex}
 
+\setlength{\bibitemsep}{0.0cm}
 \renewbibmacro{in:}{}  % don't display "in:" before the journal name
 \AtEveryBibitem{\clearfield{pages}}  % don't show page numbers
-
-\DeclareFieldFormat{title}{\myhref{\mkbibemph{#1}}}
-\DeclareFieldFormat
-[article,inbook,incollection,inproceedings,patent,thesis,unpublished]
-{title}{\myhref{\mkbibquote{#1\isdot}}}
-
-\newcommand{\doiorurl}{%
-	\iffieldundef{url}
-	{\iffieldundef{eprint}
-		{}
-		{http://arxiv.org/abs/\strfield{eprint}}}
-	{\strfield{url}}%
-}
-
-\newcommand{\myhref}[1]{%
-	\ifboolexpr{%
-		test {\ifhyperref}
-		and
-		not test {\iftoggle{bbx:eprint}}
-		and
-		not test {\iftoggle{bbx:url}}
-	}
-	{\href{\doiorurl}{#1}}
-	{#1}%
-}
-
-% references
-\usepackage[
-	bookmarks=true,
-	linktocpage=true,
-	bookmarksnumbered=true,
-	breaklinks=true,
-	pdfstartview=FitH,
-	hyperfigures=false,
-	plainpages=false,
-	naturalnames=true,
-	colorlinks=true,
-	pagebackref=false,
-	pdfpagelabels]{hyperref}
-
-\hypersetup{
-	colorlinks,
-	citecolor=blue,
-	filecolor=blue,
-	linkcolor=blue,
-	urlcolor=blue
-}
-
-\usepackage[capitalize, noabbrev]{cleveref}
-\crefname{subsection}{\S\!}{subsections}
-
-% layout
-%\addtolength{\textwidth}{1in}
-%\addtolength{\textheight}{1in}
-%\calclayout
-
-% update to MSC2020
-\makeatletter
-\@namedef{subjclassname@2020}{%
-	\textup{2020} Mathematics Subject Classification}
-\makeatother
-
-% table of contents
-\setcounter{tocdepth}{1}
