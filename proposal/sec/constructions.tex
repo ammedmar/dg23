@@ -1,57 +1,57 @@
 % !TEX root = ../proposal.tex
 
 \smallskip
-{\centering (1) \textsc{Primary \& secondary operations of triangulated spaces}~(MSc1-2,~PhD1-2)\par}
-
-\smallskip\textbf{Deliverable}.
-a) Software for the computation of primary and secondary cohomology operations for triangulated spaces over all primes.
-b) At least eight high impact publications.
+{\centering \underline{\textsc{Compute primary \& secondary cohomology operations of triangulated spaces}}\par}
+{\centering Objective (1) \hspace*{2cm} --- \hspace*{2cm} (MSc1-2, PhD1-2)\par}
 
 \smallskip\textbf{Strategic partnerships}.
-My students will engage actively with the Ontario Research Centre for Computer Algebra (ORCCA), where I will take on a faculty role.
+My students will engage actively with the Ontario Research Centre for Computer Algebra (ORCCA), where I will assume a faculty role.
 ORCCA's expertise in software development will be a crucial asset for achieving our objectives.
 As for augmenting the \texttt{SAGE} platform, we will work in close collaboration with J. Palmieri from the University of Washington, who is a principal contributor to the Topology Module of this computer algebra system (CAS).
 Additionally, a potential partnership with Canadian software company \texttt{MapleSoft} is under study.
 Should this collaboration materialize, we would focus on developing our computational tools for the \texttt{Maple} platform rather than \texttt{SAGE}.
 
 \smallskip\textbf{Background}.
-As mentioned in the introduction, Poincaré's definition of a space's cohomology is based on its cochains, denoted simply as $\cochains$.
-These cochains originate from a cellular decomposition of the space, which, for the purposes of this discussion, will be assumed to be a triangulation.
-This is a local construction, allowing for a piecewise analysis of $X$, and is thus well-suited for concrete computations.
-The computer algebra system (CAS) \texttt{SAGE}, among others, is a tool where this approach to cohomology is implemented.
-Unfortunately, cohomology—or equivalently, the quasi-isomorphism type of $\cochains$—omits crucial homotopical information.
-As an illustrative example, consider the spaces $\bC P^2$ and $S^2 \vee S^4$, the union of a 2- and a 4-sphere over a point.
+As mentioned in the introduction, Poincar\'e's definition of $\coho$ is based on the cochains $\cochains$ of a cellular decomposition, which, for our program, will be assumed to be a triangulation.
+The passage from $\cochains$ to $\coho$ is a local-to-global process well-suited for concrete computations.
+\texttt{SAGE}, among other CASs, implements this approach to $\coho$.
+Unsurprisingly, $\coho$ does not capture all homotopical information of spaces.
+To illustrate this point, consider the complex projective plane $\bC P^2$ and $S^2 \vee S^4$, which is the union of a 2- and a 4-sphere over a point.
 Despite their cohomology groups being isomorphic, these spaces are not homotopy equivalent.
-To distinguish them, one can employ the Alexander--Whitney product in $\cochains$ to reveal that their ring structures in cohomology are not isomorphic \cite{alexander1936ring, whitney1938products}.
-This product-enhanced version of $\cochains$ retains the original's computability and is also supported in \texttt{SAGE}.
-Considering the suspension of these spaces leads to two non-homotopic spaces $\Sigma(\mathbb{C} P^2)$ and $\Sigma(S^2 \vee S^4)$ whose cohomologies are isomorphic as graded rings.
-To differentiate them, we can examine Steenrod squares on $\rH^\bullet$.
-These are effectively computable using cup-$i$ products, a structure introduced in \cite{steenrod1947products} generalizing the Alexander--Whitney product.
-These cohomology operations would not suffice to distinguish a similar comparison involving a quaternionic projective space.
-In that case, we can use odd prime power operations, but these are not available on CASs yet.
-The next layer of homotopical structure, known as secondary operations, comes from relations among primary operations, which for Steenrod operations are called \textit{Adem} and \textit{Cartan relations} \cite{adem1952iteration,cartan1955steenrod}.
-Despite profound theoretical advances \cite{baues2006secondary} no systematic method to compute these for triangulated spaces exist yet.
+To distinguish them, one can use the Alexander--Whitney product in $\cochains$.
+Doing so reveals that these spaces's ring structures on $\coho$ are not isomorphic.
+Such computation can be carried out in \texttt{SAGE}.
+The suspensions $\Sigma(\mathbb{C} P^2)$ and $\Sigma(S^2 \vee S^4)$ are spaces that are not homotopy equivalent either, despite having isomorphic graded ring structures in $\coho$.
+For further differentiation, Steenrod squares on $\coho$ can be examined.
+These cohomology operations are effectively computable using cup-$i$ products, a structure that generalizes the Alexander--Whitney product \cite{steenrod1947products}.
+This functionality is also available in \texttt{SAGE}.
+However, Steenrod squares alone are insufficient to distinguish a similar comparison involving a quaternionic projective space.
+In such cases, odd prime power operations could be employed, but unfortunately, no CAS currently supports this functionality.
+Also not yet supported is the next layer of homotopical structure, known as secondary cohomology operations.
+These arise from relations among primary operations, which in the case of Steenrod operations are named after Adem and Cartan.
+Despite significant theoretical advances \cite{baues2006secondary}, no systematic method for computing these operations for triangulated spaces has been developed.
 
 \smallskip\textbf{Key idea}.
-A ground-breaking contribution to modern homotopy theory, due to Mandell \cite{mandell2001padic, mandell2006homotopy_type}, asserts that under certain finiteness assumptions, all the homotopical information of $X$ is captured by an enhancement of the cup-$i$ product structure on $\cochains$.
-This complete invariant is known as an $E_\infty$-algebra and serves as the conceptual cornerstone of our program.
-The author and other researcher have provided concrete local descriptions of this structure on $\cochains$ \cite{medina2020prop1, mcclure2003multivariable, berger2004combinatorial} which opened the door for the development of effective constructions of progressively richer homotopical invariants, like primary and secondary cohomology operations which are the focus of the present objective.
+A ground-breaking contribution to modern homotopy theory, due to Mandell \cite{mandell2006homotopy_type}, asserts that under certain finiteness assumptions, all the homotopical information of a space is captured by an enhancement of the cup-$i$ product structure on its cochains.
+This complete invariant is known as an \mbox{$E_\infty$-algebra} and serves as the conceptual cornerstone of our program.
+The author \cite{medina2020prop1}, and other researchers as well \cite{mcclure2003multivariable, berger2004combinatorial}, have provided explicit local representations of this structure, which have paved the way for developing effective methods for constructing increasingly complex homotopical invariants. These include both primary and secondary cohomology operations, which are the focal points of our current objectives.
 
 \smallskip\textbf{Methodology}.
-As discussed in \cite{medina2023fast_sq}, my formulas for cup-$i$ products offer a more efficient method for the computation of Steenrod squares on triangulated spaces compared to the existing methods.
+As discussed in \cite{medina2023fast_sq}, my formulas for cup-$i$ products offer a more efficient method for the computation of Steenrod squares on triangulated spaces compared to the existing approaches.
 The task of (\underline{MSc1}) will be to integrate these optimized algorithms into \texttt{SAGE}, and to provide illustrative examples of their use.
 Steenrod squares account for all mod 2 stable primary operations.
 Before our work \cite{medina2021may_st} with R.~Kaufmann from Purdue University, no effective methods for calculating Steenrod operations over odd primes existed.
-Building on this groundwork and the code base of (MSc1), the task of (\underline{MSc2}) will implement algorithms in \texttt{SAGE} to calculate these invariants.
-The next layer of homotopical structure beyond Steenrod operations arises from the relations these operations satisfy.
-By abstract reasons, we know that there must be a structure on the $E_\infty$-algebra on $\cochains$ that induces the Adem and Cartan relations.
-For the even prime, with G.~Brumfiel from Stanford University and J.~Morgan from Columbia University, we provided the first constructions of such structures for triangulated spaces \cite{medina2020cartan, medina2021adem}.
+Building on this groundwork and the code base of (\underline{MSc1}), the task of (\underline{MSc2}) will implement algorithms in \texttt{SAGE} to calculate these invariants.
+
+\quad The next layer of homotopical structure beyond Steenrod operations arises from the relations these operations satisfy.
+Because of abstract reasons, we know that there must be structure on the $E_\infty$-algebra on $\cochains$ that induces the Adem and Cartan relations.
+For the even prime, with G.~Brumfiel from Stanford University and J.~Morgan from Columbia University, we provided the first constructions of such structures for triangulated spaces \cite{medina2020cartan, medina2021adem}, termed \textit{Adem} and \textit{Cartan coboundaries}.
 The role of (\underline{PhD1}) will be to utilize these advances to effectively construct secondary operations on triangulated spaces over the even prime and to seamlessly integrate them into \texttt{SAGE}.
-For the Cartan formula at odd primes, parallel contributions have been made by the author in collaboration with Cantero-Mor\'an from the Autonomous University of Madrid, as cited in \cite{medina2023oddcartan}.
-The initial objective of (\underline{PhD2}) is to finalize this line of research by delivering an effective proof for the Adem relation over odd primes.
-Subsequently, leveraging the work done by (PhD1), they will integrate algorithms for computing secondary operations over odd primes into \texttt{SAGE}.
+At odd primes, Cartan coboundaries were constructed by the author and Cantero-Mor\'an from the Autonomous University of Madrid \cite{medina2023oddcartan}.
+The initial objective of (\underline{PhD2}) is to culminate this line of research by delivering an effective proof of the Adem relation over odd primes.
+Subsequently, leveraging the work done by (\underline{PhD1}), they will integrate algorithms for computing secondary operations over odd primes into \texttt{SAGE}.
 
 \smallskip\textbf{Significance}.
 The work outlined in this program represents a transformative approach to understanding and utilizing homotopical invariants, key elements in algebraic topology.
 The shift from theoretical constructs to computable, concrete constructions stands to bridge the gap between pure mathematics and various applied fields such as Data Science and Quantum Field Theory.
-Importantly, our research will enhance with these advanced routines an important computational tool, either \texttt{SAGE} or \texttt{Maple}.
+Importantly, our research will also enhance with these advanced routines a key computational tool, either \texttt{SAGE} or \texttt{Maple}.

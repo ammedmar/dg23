@@ -1,28 +1,37 @@
 % !TEX root = ../proposal.tex
 
+\begin{tikzpicture}[remember picture, overlay]
+	\node [anchor=north east, inner sep=0.5cm] at (current page.north east)
+	{\large Anibal M. Medina-Mardones};
+\end{tikzpicture}
+\vspace*{-9pt}
+
 \textsc{\large Effective Algebro-Homotopical Constructions with Applications to Data Science and Quantum Field Theory}
 --- \hfill \textsc{\large Anibal M. Medina-Mardones}
+\hrule
 
-\bigskip\textsc{Introduction}.
-There is a tense trade-off in algebraic topology having roots reaching back to the beginning of its modern form.
-This tension can be illustrated with the concept of cohomology.
+\bigskip\medskip
+{\centering \underline{\textsc{Introduction}}\par}
+
+\smallskip There is a tense trade-off in algebraic topology having roots reaching back to the beginning of its modern form.
+This tension can be illustrated with the concept of cohomology, simply denoted $\coho$.
 The first approaches, dating back to Poincar\'e, are based on the subdivision of a space into simple pieces.
-These elementary shapes are made to generate a free graded module and their spatial relations define the differential used to compute cohomology.
-This definition makes certain geometric properties of cohomology, for example excision, fairly clear.
+% m
+These elementary shapes and their spatial relations are made to generate a cochain complex from which $\coho$ is extracted.
+This definition makes certain geometric properties of $\coho$, for example excision, fairly clear.
+% m such as
 Yet, it is not easy to show that a continuous map of spaces induces a map between their associated cohomologies.
-The functoriality just alluded to is trivial when defining cohomology in terms of homotopy classes of maps to Eilenberg--MacLane spaces, but the passage to the homotopy category erases geometric and combinatorial information and the resulting definition is not well suited for concretely presented spaces.
-The tension this example illustrates manifests itself in many other important contexts, and the trade-off between concreteness and functoriality is as central today as it was almost a century ago.
+The functoriality just alluded to is trivial when defining $\coho$ in terms of homotopy classes of maps to Eilenberg--MacLane spaces, but the passage to the homotopy category erases geometric and combinatorial information and the resulting definition is not well suited for concretely presented spaces.
+The tension this example illustrates manifests itself in many other important contexts, and the trade-off between constructiveness and functoriality is as central today as it was almost a century ago.
 
-\smallskip\textsc{Objectives}.
-\textit{My long-term vision is to ease this tension by developing concrete constructions of homotopical invariants currently defined only indirectly; and, by doing so, extend the reach of algebraic topology into fields beyond pure mathematics, including Data Science and Quantum Field Theory.}
+\smallskip
+{\centering\underline{\textsc{Objectives}}\par}
+\smallskip\textit{My long-term vision is to ease this tension by developing concrete constructions of homotopical invariants currently defined only indirectly; and, by doing so, extend the reach of algebraic topology into fields beyond pure mathematics, including Data Science and Quantum Field Theory.}
 
-\smallskip We will organize the presentation of this program around four interrelated objectives.
+\smallskip We will organize the presentation of the first five years of this program around four interrelated objectives.
 
 \smallskip
 (1) Compute primary \& secondary cohomology operations of triangulated spaces. \hfill (MSc1-2, PhD1-2)\par
 (2) Compute Steenrod operations on Khovanov homology of knots and links. \hfill (MSc3, PhD3)\par
 (3) Compute Steenrod barcodes and persistent cup-lengths of real-world datasets. \hfill (MSc4-5, PhD4)\par
 (4) Build a bridge between state sum and functorial topological quantum field theories. \hfill (MSc6, PostDoc)\par
-
-%\smallskip
-%Each of these tangible contributions will follow from novel understanding of the algebro-homotopical properties of topological spaces, with a strong emphasis on computation and effectiveness.

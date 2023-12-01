@@ -1,0 +1,21 @@
+Publications
+All numbers from 1-12 correspond to published papers as outlined in my Canadian Common CV. Additionally, I have added a list of preprints that have been accepted for publication, as well as another list of those that are currently under review.
+Accepted
+13. Ranicki-Weiss assembly and the Steenrod constructions. Proc. Amer. Math. Soc. (To appear). Accepted for publication: October 11th 2023.
+14. With Ulrich Bauer and Maximilian Schmahl. Persistent homology for functionals. Commun. Contemp. Math. (To appear). Accepted for publication: on October 10th 2023.
+15. The diagonal of cellular spaces and effective algebro-homotopical constructions. EMS Surv. Math. Sci. (To appear). Accepted for publication: September 26th 2023.
+Under review
+16. With Federico Cantero-Morán. An effective proof of the Cartan formula: Odd primes.
+17. With Andrea Pizzi and Paolo Salvatore. Multisimplicial chains and configuration spaces.
+18. With Manuel Rivera. Adams’ cobar construction as a monoidal E∞-coalgebra model of the based loop space.
+19. With Greg Friedman and Dev Sinha. Flowing from intersection product to cup product.
+20. An axiomatic characterization of Steenrod’s cup-i products.
+21. With Greg Friedman and Dev Sinha. Foundations of geometric cohomology: from co-orientations to product structures.
+Author order
+The following outline articulates the nuances of my contributions across a spectrum of academic publications, offering a transparent view of my scholarly impact.
+Nine papers where I am the sole author: Papers 1, 8, 9, 10, 11, 12, 13, 15, and 20.
+Two additional papers, 3 and 4, where the second author was included as a courtesy, making them effectively single-author works.
+Seven collaborative papers with a maximum of three authors, listed alphabetically, where credit is evenly split: Papers 7, 14, 16, 17, 18, 19, and 21.
+Paper 5 is a four-author collaboration, with me listed first in acknowledgment of my leadership both in conceptualization and implementation.
+Paper 6 has eight authors and I am the fifth, reflecting my contributions mainly in the conceptual framework. This paper emerged from a public-private research partnership and the resulting code base is integral to L2F SA's business model.
+Paper 2 has three authors listed alphabetically. Although I led the project both conceptually and in implementation, the alphabetical ordering was chosen as a courtesy and to conform to standards in the theoretical mathematics community.

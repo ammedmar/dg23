@@ -1,0 +1,47 @@
+Over the years, I have been actively involved in the training and mentorship of Highly Qualified Personnel (HQP) across various academic levels and institutions. My contributions demonstrate a focus on both theoretical and applied topics in topology and interdisciplinary studies. Here are some notable examples:
+Matthew Schoenbauer
+Training Environment: Weekly meetings in the context of a reading course. Project Name: Topology and Data. Year: 2018. Institution: University of Notre Dame - USA. Level: Undergraduate.
+HQP Awards and Research Contributions: Matthew's study involved using topological methods to interpret complex data structures. Specifically, the use of persistent homology in cancer research.
+Outcomes and Skills Gained by HQP: Matthew's undergraduate research provided him with a solid understanding of persistent homology and the basics of topological data analysis.
+Celena Guerrero
+Training Environment: Weekly meetings in the context of a reading course. Project: Quantifying Gerrymandering. Year: 2018. Institution: University of Notre Dame - USA. Level: Undergraduate. EDI considerations: Celena also comes from a Latin-American background.
+HQP Awards and Research Contributions: Celena's project focused on applying topological concepts to quantify the effects of gerrymandering.
+Outcomes and Skills Gained by HQP: Celena's undergraduate research provided her with a solid understanding of gerrymandering metrics and critical tools relevant to political action.
+Djian Post
+Training Environment: Weekly meetings in the context of a Master's final project I co-supervised with Kathryn Hess. Project: Combinatorial Algebraic Topology in Python. Year: 2019. Institution: École Polytechnique Fédérale de Lausanne - Switzerland. Level: Masters.
+HQP Awards and Research Contributions: Djian worked on leveraging Python to model homotopical structures coming from combinatorial algebraic topology.
+Outcomes and Skills Gained by HQP: In addition to acquiring a foundational understanding of algebraic topology, Djian also developed advanced Python coding skills.
+Andrea Pizzi
+Training Environment: biweekly meetings in the context of a research project connected with his master's thesis, supervised by Paolo Salvatore. Project: Multisimplicial chains and configuration spaces. Year: 2023. Institution: University of Rome Tor Vergata - Italy. Level: Masters.
+HQP Awards and Research Contributions: Andrea, working with me and Paolo, worked on the project "Multisimplicial Chains and Configuration Spaces" which contained his Master thesis as well as deeper results research. This project resulted in a three-author paper accepted in Journal of Homotopy and Related structures.
+Outcomes and Skills Gained by HQP: Andrea learned about E-infinity structures from me and about configuration spaces from Paolo. He is now a PhD student under Paolo's supervision.
+Aaron Noel Huntley
+Training Environment: Weekly meetings in the context of a master's degree I am formally supervising. Project: A-infinity algebras and Street's diagram. Year: Ongoing. Institution: Western University - Canada. Level: Masters.
+HQP Awards and Research Contributions: Aaron will prove a purely mathematical statement we observed during work on Topological Quantum Field Theories. It relates A-infinity algebras to the free infinity category on standard simplices. Please consult Objective (4) for the specific statement.
+Outcomes and Skills Gained by HQP: So far, Aaron has learned about the history and technical foundations of A-infinity algebras.
+Jiayin Lyu
+Training Environment: Weekly supervisory meetings conducted within the framework of a master's degree that I am formally overseeing. Project: Persistent Cohomology of Molecular Conformation Spaces. Year: Ongoing. Institution: Western University. Level: Masters. EDI Consideration: Consistent with my commitment to gender parity, as articulated in my HQP Training Philosophy, 50% of my current students self-identify as women, including Jiayin.
+HQP Awards and Research Contributions: Jiayin is tasked with developing a comprehensive catalogue of Steenrod barcodes for densely sampled molecular conformation spaces. Further details can be found in Objective (3) of our proposal.
+Outcomes and Skills Gained by HQP: Thus far, Jiayin has acquired fundamental knowledge in persistent homology and has become proficient in utilising computational tools such as giottoTDA and Gudhi.
+These experiences exemplify my dedication to fostering academic excellence and practical skills in the next generation of researchers and professionals in the field of topology and its interdisciplinary applications.
+
+
+Introduction
+
+I have been deeply committed to the training and mentorship of HQP across various academic levels and institutions. My focus has been on cultivating both theoretical knowledge and practical skills, ensuring that each student is prepared for a dynamic, interdisciplinary research environment. Although my earlier roles as a postdoctoral researcher did not permit formal supervision of Master's or Ph.D. students, I proactively sought opportunities for mentorship. These include conducting individual undergraduate reading courses at the University of Notre Dame, supporting two Master's theses, and leading a graduate student reading group during my postdoctoral tenure at École Polytechnique Fédérale de Lausanne.
+ 
+Research Environment
+
+My training approach varies according to the needs of the HQP, yet it often centers around weekly or biweekly meetings within the context of reading courses, master's projects, or reading groups. I have collaborated with other leading scholars to provide a multifaceted educational experience and engage with students from institutions across the globe, including the USA, Switzerland, Italy, and Canada. Each training environment is designed to be inclusive, with particular attention to Equity, Diversity, and Inclusion (EDI) considerations. A good example of this commitment for inclusive research spaces is the reading group on novel developments of Topological Data Analysis I started at EPFL.
+
+Research Contributions
+
+The research contributions of the HQP I've mentored are diverse, covering both theoretical and applied fields. For example, during their individual reading courses with me, Celena Guerrero focused on the topological aspects of gerrymandering, while Matthew Schoenbauer applied topological methods to cancer research. In more traditional mathematical pursuits, Andrea Pizzi explored multisimplicial chains and configuration spaces in his Master's thesis, where I provided guidance on E-infinity algebras. Similarly, Djian Post used Python to advance computational topology in his MSc work, benefiting from conceptual and technical support on a weekly basis.
+
+Outcomes and Skills
+
+The skills developed by the HQP I have mentored are varied, covering both deep theoretical knowledge in topology and coding skills. Except for Andrea Pizzi, all the HQPs I have mentored have transitioned successfully into industry positions. Andrea's Master's thesis led to a joint three-author publication written in collaboration with his advisor, Paolo Salvatore. Andrea is now continuing his academic journey by pursuing a PhD under Paolo's supervision.
+
+Conclusion
+
+My training and mentorship approach aims to prepare the next generation of researchers and professionals in topology and its interdisciplinary applications. The case studies presented above attest to the success of this philosophy, with HQP gaining both theoretical knowledge and practical, often computational, skills. Through this multidisciplinary, inclusive approach, I am fostering a cohort of scholars well-prepared for academic and professional pursuits in a complex, interconnected world.

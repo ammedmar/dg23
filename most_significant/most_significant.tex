@@ -1,14 +1,12 @@
 \documentclass{amsart}
 \input{style}
 \usepackage{parskip}
-\addbibresource{../usualpapers.bib}
 \addbibresource{../bibliography.bib}
 
 \title{Most Significant Contributions 9000}
 
 \begin{document}
-	\maketitle
-	\textbf{Theoretic topology: context}
+	\textbf{Algebraic topology}
 
 	Topology is the branch of mathematics that studies the properties of spaces preserved under continuous deformations, such as stretching and bending, but not tearing or gluing. The properties revealed by this perspective serve as a foundational layer for the study of more structured spaces, such as riemannian manifolds or algebraic varieties. The foundational layer is known as the homotopy type, and a primary goal of the field is to develop algebraic invariants for its study. A significant example of such an invariant is cohomology. While its distinguishing power has severe limitations, this (graded) abelian group can be effectively calculated by decomposing the space in question into simpler components, making it well suited for concrete applications.
 
@@ -23,7 +21,7 @@
 
 	Steenrod squares are related to the ring structure in cohomology by the Cartan formula. An effective cochain-level proof of this formula was developed by the PI \cite{medina2020cartan}, further enriched by the introduction of an open-source computational tool. Similarly, with G. Brumfiel and J. Morgan from Stanford and Columbia Universities respectively, the PI gave an effective proof of the Adem formula, which controls the iteration of Steenrod squares \cite{medina2021adem}.
 
-	A very significant application of our formulas was given by Gaiotto, Kapustin, and other physicist \cite{kapustin2017fermionic, barkeshli2021classification}.
+	A very significant application of our formulas was given by Gaiotto, Kapustin, and other physicist \cite{kapustin2017fermionic, barkeshli2022classification}.
 	They use them to classify low dimensional symmetry-protected fermionic topological phases of matter. This result illustrates the importance of constructive methods for the application of topology to condensed matter physics.
 	Recently, the PI has also provided an effective proof for the Cartan relation of all Steenrod operations \cite{medina2023oddcartan}, and his team will provide one for the Adem relation over all primes.
 
@@ -33,9 +31,9 @@
 
 	These new models were used by the PI to prove a conjecture of R. Kaufmann connecting various models in the literature \cite{kaufmann2009dimension}. Given its small number of generators and relations, the aforementioned $E_\infty$-operads are well suited to define $E_\infty$-algebras concretely. The PI initially accomplished this for simplicial sets in \cite{medina2020prop1}. Subsequently, in collaboration with R. Kaufmann, the approach was extended to cubical sets in \cite{medina2022cube_einfty}. Finally, working alongside A. Pizzi and P. Salvatore from the University of Rome, this methodology was further generalized to multisimplicial sets and used to study configuration spaces \cite{medina2022multisimplicial}. An important application of the cubical result is a proof, by the PI and M. Rivera from Purdue University, that Adams' comparison map is not only a quasi-isomorphism of monoidal coalgebras, as shown by H.J. Baues \cite{baues1998hopf}, but one of monoidal $E_\infty$-coalgebras \cite{medina2021cobar}.
 
-	\textbf{Applied topology: context}
+	\textbf{Applied topology}
 
-	....
+	Applied topology takes concepts and techniques from topology, particularly algebraic topology, and applies them to solve real-world problems, often in collaboration with other disciplines.
 
 	4. \textbf{Topological Data Analysis: Giotto-TDA}
 
@@ -46,7 +44,9 @@
 
 	5. \textbf{Hyperharmonic analysis for the study of high-order information-theoretic signals}
 
-	...
+	Network representations often could not fully account for the structural richness of complex systems that spanned multiple levels of organization. Recently proposed high-order information-theoretic signals were well-suited to capture synergistic phenomena that transcended pairwise interactions; however, the exponential growth of their cardinality severely hindered their applicability. In \cite{medina2021hyperharmonic}, we combined methods from harmonic analysis and combinatorial topology to construct efficient representations of high-order information-theoretic signals. The core of our method was the diagonalization of a discrete version of the Laplace–de Rham operator, which geometrically encoded structural properties of the system. We capitalized on these ideas by developing a complete workflow for the construction of hyperharmonic representations of high-order signals, applicable to a wide range of scenarios.
+
+	The use of the discrete Laplace-de Rham operator has become a central focus on the applications of topology. We mentioned that our compression technique has been used, for example, in the study of interdependencies in entangled quantum states \cite{physics}, stock market analysis \cite{stocks}, and brain brain activity at different scales \cite{brain}.
 
 
 
